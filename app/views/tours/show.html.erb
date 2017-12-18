@@ -1,5 +1,15 @@
 <h1><%= @tour.title %></h1>
 <h4><%= number_to_currency @tour.price %></h4>
-<div class = "card">
-  <p><%= @tour.description%></p>
+<div class = "row">
+  <div class = "col-8-md">
+    <div class = "card">
+      <div class = "card-body">
+        <ul>
+          <li><%= @tour.description%></li>
+          <li><%= @tour.location %></li>
+        </ul>
+        <%= link_to "Home", tours_path %>
+      </div>
+    </div>
+  </div>
 </div>
