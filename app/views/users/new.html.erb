@@ -15,7 +15,10 @@
     <br>
     <%= f.select(:guide, options_for_select([['Attendee', false], ['Guide', true]]))  %>
     <br>
+    <br>
     <%= f.submit "Sign Up", class: 'btn btn-success form-control' %>
     <% end %>
+    <br>
+    <h4><%= link_to "Back to Tours", tours_path %></h4>
   </div>
 </div>
