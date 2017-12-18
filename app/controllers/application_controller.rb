@@ -29,6 +29,7 @@ class ApplicationController < ActionController::Base
   def authorize_guide
     if !current_user.guide
       flash[:alert] = 'You must be a guide to create a tour!'
+      redirect_to tours_path
     end
   end
 
@@ -39,5 +40,5 @@ class ApplicationController < ActionController::Base
       Order.new
     end
   end
-  
+
 end
