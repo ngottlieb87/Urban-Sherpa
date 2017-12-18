@@ -4,8 +4,9 @@
         <div class = "card-body">
         <% @tours.each do |tour| %>
         <h1><%= tour.title %></h1>
-          <p><%= tour.description %></p>
-          <p><%= tour.price %></p>
+          <p>"<%= tour.description %>"</p>
+          <p>Price: $<%= tour.price %></p>
+          <p>Tour Date: <%= tour.date %></p>
           <% end %>
         </div>
     </div>
