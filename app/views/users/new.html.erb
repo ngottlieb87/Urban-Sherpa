@@ -5,7 +5,7 @@
     <%= form_for @user do |f| %>
     <%= f.label :email %>
     <%= f.text_field :email, class: 'form-control'%>
-    <%= f.label :password %>
+    <%= f.label "Password: Password Requires 7-15 characters including at least 1 upper and lower case letter, and 1 digit" %>
     <%= f.password_field :password, class: 'form-control' %>
     <%= f.label :password_confirmation %>
     <%= f.password_field :password_confirmation, class: 'form-control' %>
