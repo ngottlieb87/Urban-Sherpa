@@ -12,6 +12,7 @@
     <%= f.label :user_name %>
     <%= f.text_field :user_name, class: 'form-control'%>
     <%= f.label "Would you like to be a Guide or will you Attend tours?" %>
+    <br>
     <%= f.select(:guide, options_for_select([['Attendee', false], ['Guide', true]]))  %>
     <br>
     <%= f.submit "Sign Up", class: 'btn btn-success form-control' %>
