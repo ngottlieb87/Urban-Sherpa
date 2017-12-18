@@ -9,6 +9,14 @@
   </head>
 
   <body>
+    <% if current_user %>
+        <%= current_user.email %> <span id="pipe">|</span> <%= link_to "Sign out", '/signout', id: "signout" %>
+      <% else %>
+        <%= link_to "Sign up", '/signup', id:'sign_up'%> | <%= link_to "Sign in", '/signin', id:'sign_in'%>
+      <% end %>
+      <%= flash[:alert] %>
+      <%= flash[:notice] %>
+      <br>
     <%= yield %>
   </body>
 </html>
