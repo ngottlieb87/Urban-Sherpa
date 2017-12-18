@@ -1,0 +1,14 @@
+<h1>Sign in</h1>
+<div class = "card form-group">
+  <div class= "card-body">
+  <%= form_tag signin_path do %>
+    <%= label_tag :email %>
+    <%= text_field_tag :email %>
+    <br>
+    <%= label_tag :password %>
+    <%= password_field_tag :password %>
+    <br>
+    <%= submit_tag "Sign in", id: "sign_in_button", :class => "btn btn-success" %>
+  <% end %>
+  </div>
+</div>
