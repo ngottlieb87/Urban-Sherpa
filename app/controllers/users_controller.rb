@@ -11,7 +11,6 @@ class UsersController < ApplicationController
       flash[:notice] = "You've successfully signed up!"
       session[:user_id] = @user.id
       account.user_id = @user.id
-      binding.pry
       account.save
       redirect_to '/'
     else
