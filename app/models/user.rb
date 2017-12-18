@@ -2,7 +2,7 @@ class User < ApplicationRecord
   has_one :account
   validates :user_name, presence: true
   validates :password, presence: true
-  validates :email, presence: true
+  validates :email, presence: true, uniqueness: true
   validates_confirmation_of :password, presence: true
 
   attr_accessor :password

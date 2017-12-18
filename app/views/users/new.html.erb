@@ -1,0 +1,20 @@
+<h1>Sign Up!</h1>
+
+<div class = "card">
+  <div class = "card-body">
+    <%= form_for @user do |f| %>
+    <%= f.label :email %>
+    <%= f.text_field :email, class: 'form-control'%>
+    <%= f.label :password %>
+    <%= f.password_field :password, class: 'form-control' %>
+    <%= f.label :password_confirmation %>
+    <%= f.password_field :password_confirmation, class: 'form-control' %>
+    <%= f.label :user_name %>
+    <%= f.text_field :user_name, class: 'form-control'%>
+    <%= f.label "Would you like to be a Guide or will you Attend tours?" %>
+    <%= f.select(:guide, options_for_select([['Attendee', false], ['Guide', true]]))  %>
+    <br>
+    <%= f.submit "Sign Up", class: 'btn btn-success form-control' %>
+    <% end %>
+  </div>
+</div>
