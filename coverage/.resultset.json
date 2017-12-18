@@ -428,6 +428,7 @@
         1,
         1,
         1,
+        1,
         null,
         1,
         1,
@@ -500,7 +501,13 @@
         null
       ],
       "/Users/Guest/Desktop/Urban-Sherpa/spec/models/order_spec.rb": [
-
+        1,
+        null,
+        1,
+        2,
+        2,
+        2,
+        null
       ],
       "/Users/Guest/Desktop/Urban-Sherpa/spec/models/tour_order_spec.rb": [
         1,
@@ -535,6 +542,6 @@
         null
       ]
     },
-    "timestamp": 1513631497
+    "timestamp": 1513631951
   }
 }
