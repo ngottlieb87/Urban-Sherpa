@@ -4,6 +4,7 @@ class User < ApplicationRecord
   validates :password, presence: true
   validates :email, presence: true, uniqueness: true
   validates_confirmation_of :password, presence: true
+  validate :password_complexity
   attr_accessor :password
   before_save :encrypt_password
 
