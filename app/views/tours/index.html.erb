@@ -1,14 +1,16 @@
 <div class ="row">
+
+<% @tours.each do |tour| %>
   <div class = "col-4-md">
     <div class = "card">
         <div class = "card-body">
-        <% @tours.each do |tour| %>
         <h1><%= tour.title %></h1>
           <p>"<%= tour.description %>"</p>
-          <p>Price: $<%= tour.price %></p>
+          <p>Price: <%= number_to_currency tour.price %></p>
           <p>Tour Date: <%= tour.date %></p>
-          <% end %>
         </div>
     </div>
   </div>
-</div>
+  <% end %>
+  
+  </div>
