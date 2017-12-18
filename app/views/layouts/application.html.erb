@@ -3,12 +3,13 @@
   <head>
     <title>UrbanSherpa</title>
     <%= csrf_meta_tags %>
-
+    <%= favicon_link_tag asset_path('favicon.png'), :rel => 'icon', :type =>  'image/png' %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
+    <div class = "container">
     <% if current_user %>
         <%= current_user.email %> <span id="pipe">|</span> <%= link_to "Sign out", '/signout', id: "signout" %>
       <% else %>
@@ -18,5 +19,6 @@
       <%= flash[:notice] %>
       <br>
     <%= yield %>
+    </div>
   </body>
 </html>
