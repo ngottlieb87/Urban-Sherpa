@@ -4,6 +4,10 @@ class ToursController < ApplicationController
     @tours = Tour.all
   end
 
+  def show
+    @tour = Tour.find(params[:id])
+  end
+
   private
 
   def tour_params
