@@ -8,8 +8,17 @@
           <li><%= @tour.description%></li>
           <li><%= @tour.location %></li>
         </ul>
-        <%= link_to "Home", tours_path %>
+
+        <% if @tour.comments.any? %>
+          <% @tour.comments.each do |comment| %>
+          <%= comment.body %>
+          comment by: <%= comment.user.user_name %>
+          <% end %>
+        <% else %>
+        <p>There are no comments for this tour. Been on it? <%= link_to "Add one!", new_tour_comment_path(@tour)%></p>
+        <% end %>
       </div>
     </div>
+    <%= link_to "Home", tours_path %>
   </div>
 </div>
