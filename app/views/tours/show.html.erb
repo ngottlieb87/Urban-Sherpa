@@ -10,6 +10,9 @@
         </ul>
         <%= form_for @tour_order do |f| %>
           <%= f.hidden_field :tour_id, value: @tour.id %>
+          <%= f.label "Number of People Attending"%>
+          <%= f.number_field :quantity, in: 1..5%>
+          <br>
           <%= f.submit "Add to Your Itinerary", class: "btn btn-dark" %>
         <% end %>
       </div>
