@@ -2,10 +2,12 @@ class ToursController < ApplicationController
 
   def index
     @tours = Tour.all
+    @tour_order = current_order.tour_orders.new
   end
 
   def show
     @tour = Tour.find(params[:id])
+    @tour_order = current_order.tour_orders.new
   end
 
   private

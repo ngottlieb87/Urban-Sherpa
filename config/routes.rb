@@ -11,12 +11,9 @@ Rails.application.routes.draw do
 
   resource :cart, only: [:show]
 
+  resources :tour_orders
+
   resources :tours do
     resources :comments
   end
-
-  resources :tour_orders do
-      resources :orders
-  end
-
 end
