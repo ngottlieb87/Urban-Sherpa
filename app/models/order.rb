@@ -7,7 +7,6 @@ class Order < ApplicationRecord
   # before_create :update_status
 
   def calculate_total
-    binding.pry
     self.tour_orders.collect {|item| item.tour.price * item.quantity }.sum
   end
 

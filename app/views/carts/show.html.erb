@@ -5,6 +5,7 @@
     <% if @tour_orders.any? %>
       <% @tour_orders.each do |item| %>
       <p><strong><%= item.tour.title %> </strong><%= number_to_currency item.tour.price%></p>
+      <strong><p>Number in tour: <%= item.quantity%></p></strong>
       <hr>
       <% end %>
       <h4> Your Total: <%= number_to_currency current_order.total_price %></h4>
@@ -12,5 +13,5 @@
       <p><%= "You havent signed up for any tours yet."%> <%= link_to "Go and check'em out!", tours_path %></p>
     <% end %>
   </div>
-  <%= link_to "Back To Tours", tours_path %>
+  <h4><%= link_to "Back To Tours", tours_path %></h4>
 </div>

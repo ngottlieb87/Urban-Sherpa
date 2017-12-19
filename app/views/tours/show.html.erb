@@ -1,7 +1,7 @@
 <h1><%= @tour.title %></h1>
 <h4><%= number_to_currency @tour.price %></h4>
 <div class = "row">
-  <div class = "col-md-6">
+  <div class = "col-md-4">
     <div class = "card">
       <div class = "card-body">
         <ul>
@@ -17,13 +17,12 @@
         <% end %>
       </div>
     </div>
-    <%= link_to "Home", tours_path %>
   </div>
-  <div class= "col-md-6">
+  <div class= "col-md-4">
     <% if @tour.comments.any? %>
       <div class= "card">
           <h3>Comments for <%= @tour.title %></h3>
-          <p><%=link_to "Leave a comment", new_tour_comment_path(@tour)%></p>
+          <p id="hide_comment_link"><%=link_to "Leave a comment", new_tour_comment_path(@tour), remote: true%></p>
         <div class= "card-body">
         <% @tour.comments.each do |comment| %>
         <%= comment.body %>
@@ -32,8 +31,9 @@
         <hr>
         <% end %>
       <% else %>
-        <p>There are no comments for this tour. Been this tour? <%= link_to "Let others know what you think about it!", new_tour_comment_path(@tour)%></p>
+        <p class= "addComment">There are no comments for this tour. Been this tour? <%= link_to "Let others know what you think about it!", new_tour_comment_path(@tour), remote: true%></p>
     <% end %>
+      <span id= "displayComment"></span>
       </div>
     </div>
   </div>
