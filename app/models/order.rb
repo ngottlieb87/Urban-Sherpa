@@ -13,11 +13,11 @@ class Order < ApplicationRecord
 
   private
 
-  def update_status
-    if self.update == nil?
-      self.status = "In progress"
-    end
-  end
+  # def update_status
+  #   if self.update == nil?
+  #     self.status = "In progress"
+  #   end
+  # end
 
   def update_total
     self.total_price = calculate_total
