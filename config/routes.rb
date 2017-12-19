@@ -9,10 +9,9 @@ Rails.application.routes.draw do
   get '/signout' => 'sessions#destroy'
 
 
-  resource :cart, only: [:show] 
+  resource :cart, only: [:show]
 
   resources :tours do
-    resources :tour_orders
     resources :comments
   end
 
