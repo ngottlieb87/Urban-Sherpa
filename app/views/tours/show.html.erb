@@ -1,24 +1,33 @@
 <h1><%= @tour.title %></h1>
 <h4><%= number_to_currency @tour.price %></h4>
 <div class = "row">
-  <div class = "col-8-md">
+  <div class = "col-md-6">
     <div class = "card">
       <div class = "card-body">
         <ul>
           <li><%= @tour.description%></li>
           <li><%= @tour.location %></li>
         </ul>
-
-        <% if @tour.comments.any? %>
-          <% @tour.comments.each do |comment| %>
-          <%= comment.body %>
-          comment by: <%= comment.user.user_name %>
-          <% end %>
-        <% else %>
-        <p>There are no comments for this tour. Been on it? <%= link_to "Add one!", new_tour_comment_path(@tour)%></p>
-        <% end %>
       </div>
     </div>
     <%= link_to "Home", tours_path %>
+  </div>
+  <div class= "col-md-6">
+    <% if @tour.comments.any? %>
+      <div class= "card">
+          <h3>Comments for <%= @tour.title %></h3>
+          <p><%=link_to "Leave a comment", new_tour_comment_path(@tour)%></p>
+        <div class= "card-body">
+        <% @tour.comments.each do |comment| %>
+        <%= comment.body %>
+        <br>
+        Comment By: <em><%= comment.user.user_name %></em>
+        <hr>
+        <% end %>
+      <% else %>
+        <p>There are no comments for this tour. Been on it? <%= link_to "Add one!", new_tour_comment_path(@tour)%></p>
+      <% end %>
+      </div>
+    </div>
   </div>
 </div>
