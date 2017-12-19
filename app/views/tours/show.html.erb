@@ -10,7 +10,6 @@
         </ul>
         <%= form_for @tour_order do |f| %>
           <%= f.hidden_field :tour_id, value: @tour.id %>
-          <%= binding.pry %>
           <%= f.submit "Add to Your Itinerary", class: "btn btn-dark" %>
         <% end %>
       </div>

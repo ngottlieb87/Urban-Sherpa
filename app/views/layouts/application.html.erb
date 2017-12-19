@@ -11,7 +11,7 @@
   <body>
     <div class = "container">
     <% if current_user %>
-        <%= current_user.email %> <span id="pipe">|</span> <%= link_to "Sign out", '/signout', id: "signout"%> | <%= link_to "Your Tours | #{tours_in_cart}", cart_path %>
+        <%= current_user.email %> <span id="pipe">|</span> <%= link_to "Sign out", '/signout', id: "signout"%> | <%= link_to "Your Tours | #{tour_cart}", cart_path %>
       <% else %>
         <%= link_to "Sign up", '/signup', id:'sign_up'%> | <%= link_to "Sign in", '/signin', id:'sign_in'%>
       <% end %>
