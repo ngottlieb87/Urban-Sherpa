@@ -1,0 +1,10 @@
+  <%= form_for [@tour, @comment] do |f| %>
+  <br>
+  <div class = "card">
+    <div class = "card-body">
+      <%= f.text_area :body, class: "form-control" %>
+      <%= f.hidden_field(:user_id, value: current_user.id)%>
+      <%= f.submit 'Create Comment', class: "btn btn-primary form-control" %>
+      <% end %>
+    </div>
+  </div>
