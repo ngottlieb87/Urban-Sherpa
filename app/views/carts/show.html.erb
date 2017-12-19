@@ -1,0 +1,15 @@
+<div class = "card">
+  <div class = "card-body">
+    <h3>Current Tours</h3>
+    <hr>
+    <% if @tour_orders.any? %>
+      <% @tour_orders.each do |item| %>
+      <p><strong><%= item.tour.title %></strong><%= number_to_currency item.tour.price%></p>
+      <hr>
+      <h4> Your Total: <%= number_to_currency current_order.total_price %></h4>
+      <% end %>
+    <% else %>
+      <p><%= "You havent signed up for any tours yet."%> <%= link_to "Go and check'em out!", tours_path %></p>
+    <% end %>
+  </div>
+</div>
