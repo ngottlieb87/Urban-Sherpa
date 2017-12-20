@@ -16,6 +16,10 @@
     <%= f.select(:guide, options_for_select([['Attendee', false], ['Guide', true]]))  %>
     <br>
     <br>
+    <%= f.label "Pick an image for your avatar."%>
+    <%= f.file_field :avatar, :class => "form-control" %>
+    <br>
+    <br>
     <%= f.submit "Sign Up", class: 'btn btn-success form-control' %>
     <% end %>
     <br>

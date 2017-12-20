@@ -7,6 +7,9 @@ class User < ApplicationRecord
   validate :password_complexity
   attr_accessor :password
   before_save :encrypt_password
+  has_attached_file :avatar, styles: { small: "80x90>" }, default_url: "/images/:style/missing.png"
+  validates_attachment_content_type :avatar, content_type: /\Aimage\/.*\z/
+
 
   def password_complexity
     if password.present?
