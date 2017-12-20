@@ -7,7 +7,7 @@ class CreateTours < ActiveRecord::Migration[5.1]
       t.date :date
       t.time :time
       t.decimal :price
-
+      t.integer :user_id
      t.timestamps
     end
   end

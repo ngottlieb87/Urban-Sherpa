@@ -10,7 +10,7 @@ Rails.application.routes.draw do
 
 
   resource :cart, only: [:show]
-  
+
   resources :charges
 
   resources :tours do

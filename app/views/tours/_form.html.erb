@@ -13,5 +13,8 @@
   <%= f.label "What Would You like for Compensation?" %>
   <%= f.number_field :price, class:"form-control"%>
   <br>
+  <%= f.file_field :photo, class: "form-control" %>
+  <br>
+  <%= f.hidden_field(:user_id, value: current_user.id)%>
   <%= f.submit "Create Tour", class: " btn btn-success form-control"%>
 <% end %>

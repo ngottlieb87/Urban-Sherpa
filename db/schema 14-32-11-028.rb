@@ -50,6 +50,7 @@ ActiveRecord::Schema.define(version: 20171220213647) do
     t.date "date"
     t.time "time"
     t.decimal "price"
+    t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "photo_file_name"

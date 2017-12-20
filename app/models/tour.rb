@@ -2,6 +2,7 @@ class Tour < ApplicationRecord
   has_many :orders, through: :tour_orders
   has_many :tour_orders
   has_many :comments
+  belongs_to :user
   validates :price, presence: true
   validates :title, presence: true
   validates :description, presence: true
