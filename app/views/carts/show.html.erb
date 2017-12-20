@@ -9,6 +9,8 @@
       <hr>
       <% end %>
       <h4> Your Total: <%= number_to_currency current_order.total_price %></h4>
+      <br>
+      <button class="btn btn-warning"><%= link_to "Checkout", new_charge_path %></button>
     <% else %>
       <p><%= "You havent signed up for any tours yet."%> <%= link_to "Go and check'em out!", tours_path %></p>
     <% end %>

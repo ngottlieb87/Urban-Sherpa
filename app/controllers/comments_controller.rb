@@ -1,4 +1,5 @@
 class CommentsController < ApplicationController
+
   def new
     @tour = Tour.find(params[:tour_id])
     @comment = @tour.comments.new

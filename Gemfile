@@ -28,11 +28,12 @@ gem 'bootstrap'
 gem 'jquery-rails'
 gem 'devise'
 gem 'faker'
-gem 'paperclip', '~> 4.1'
 gem 'rails_admin'
 gem 'socialization'
 gem 'will_paginate', '~> 3.1.0'
 gem 'bcrypt', '~> 3.1.7'
+gem "paperclip", "~> 5.0.0"
+gem 'stripe'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
@@ -51,6 +52,7 @@ group :development, :test do
   gem 'capybara'
   gem "factory_bot_rails", "~> 4.0"
   gem 'simplecov', require: false
+  gem 'dotenv-rails'
 end
 
 group :development do

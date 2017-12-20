@@ -22,7 +22,9 @@
     <% if @tour.comments.any? %>
       <div class= "card">
           <h3>Comments for <%= @tour.title %></h3>
-          <p id="hide_comment_link"><%=link_to "Leave a comment", new_tour_comment_path(@tour), remote: true%></p>
+          <% if current_user %>
+            <p id="hide_comment_link"><%=link_to "Leave a comment", new_tour_comment_path(@tour), remote: true%></p>
+          <% end %>
         <div class= "card-body">
         <% @tour.comments.each do |comment| %>
         <%= comment.body %>
