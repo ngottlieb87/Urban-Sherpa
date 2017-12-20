@@ -18,18 +18,18 @@ class ToursController < ApplicationController
   end
 
   def create
-    @tour = Tour.find(params[:id])
-    if @project.update(project_params)
+    @tour = Tour.new(tour_params)
+    if @tour.save
       flash[:notice]= "Tour Created"
       redirect_to tours_path
     else
-      render :edit
+      render :new
     end
   end
 
   private
 
   def tour_params
-    params.require(:tour).permit(:user_name, :price, :description, :location, :date, :time)
+    params.require(:tour).permit(:user_name,:title, :price, :description, :location, :date, :time)
   end
 end

@@ -1,4 +1,6 @@
-<button><%=link_to "Create A Tour", new_tour_path %></button>
+<% if is_guide? %>
+  <button class="btn btn-dark"><%=link_to "Create A Tour", new_tour_path %></button>
+<% end %>
 <div class ="row">
 
 <% @tours.each do |tour| %>

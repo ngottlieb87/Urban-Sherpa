@@ -1,17 +1,17 @@
 <%= render "layouts/errors", :object => @tour %>
 
 <%= form_for @tour do |f| %>
-<%= f.label "What will you call your Tour?" %>
-<%= f.text_field :title, class: "form-control"%>
-<%= f.label "What are you gonna do on your tour?" %>
-<%= f.text_area :description, class: "form-control", rows: 7%>
-<%= f.label "Where will your tour take place?" %>
-<%= f.text_field :location, class: "form-control"%>
-<%= f.label "Date and time it will take place?" %>
-<%= f.date_field :date, class: "form-control"%>
-<%= f.time_field :time, class: "form-control"%>
-<%= f.label "What Would You like for Compensation?" %>
-<%= f.number_field :price, class:"form-control"%>
-<br>
-<%= f.submit "Create Tour", class: " btn btn-success form-control"%>
+  <%= f.label "What will you call your Tour?" %>
+  <%= f.text_field :title, class: "form-control"%>
+  <%= f.label "What are you gonna do on your tour?" %>
+  <%= f.text_area :description, class: "form-control", rows: 7%>
+  <%= f.label "Where will your tour take place?" %>
+  <%= f.text_field :location, class: "form-control"%>
+  <%= f.label "Date and time it will take place?" %>
+  <%= f.date_field :date, class: "form-control"%>
+  <%= f.time_field :time, class: "form-control"%>
+  <%= f.label "What Would You like for Compensation?" %>
+  <%= f.number_field :price, class:"form-control"%>
+  <br>
+  <%= f.submit "Create Tour", class: " btn btn-success form-control"%>
 <% end %>
