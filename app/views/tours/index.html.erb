@@ -1,18 +1,35 @@
 <% if is_guide? %>
   <button class="btn btn-dark"><%=link_to "Create A Tour", new_tour_path %></button>
-<% end %>
-<div class ="row">
 
-<% @tours.each do |tour| %>
-  <div class = "col-lg-4">
-    <div class = "card">
-        <div class = "card-body">
-        <h1><%= link_to tour.title, tour_path(tour) %></h1>
-          <p>"<%= tour.description %>"</p>
-          <p>Price: <%= number_to_currency tour.price %></p>
-          <p>Tour Date: <%= tour.date %></p>
-        </div>
+  <div class ="row">
+
+  <% @tours.each do |tour| %>
+    <div class = "col-lg-4">
+      <div class = "card">
+          <div class = "card-body">
+          <h1><%= link_to tour.title, tour_path(tour) %></h1>
+            <p>"<%= tour.description %>"</p>
+            <p>Price: <%= number_to_currency tour.price %></p>
+            <p>Tour Date: <%= tour.date %></p>
+          </div>
+      </div>
     </div>
+    <% end %>
   </div>
-  <% end %>
-</div>
+  <% else %>
+  <div class ="row">
+
+  <% @tours.each do |tour| %>
+    <div class = "col-lg-4">
+      <div class = "card">
+          <div class = "card-body">
+          <h1><%= link_to tour.title, tour_path(tour) %></h1>
+            <p>"<%= tour.description %>"</p>
+            <p>Price: <%= number_to_currency tour.price %></p>
+            <p>Tour Date: <%= tour.date %></p>
+          </div>
+      </div>
+    </div>
+    <% end %>
+  </div>
+<% end %>

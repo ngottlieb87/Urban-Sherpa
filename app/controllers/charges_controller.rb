@@ -18,6 +18,8 @@ class ChargesController < ApplicationController
       :currency    => 'usd'
     )
 
+    session[:order_id] = nil
+    
   rescue Stripe::CardError => e
     flash[:error] = e.message
     redirect_to new_charge_path
