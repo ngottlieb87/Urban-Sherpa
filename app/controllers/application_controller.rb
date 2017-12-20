@@ -19,6 +19,13 @@ class ApplicationController < ActionController::Base
     current_user && current_user.guide
   end
 
+  def authorize
+    if !current_user
+      flash[:alert] = 'Please sign in to access'
+      redirect_to tours_path
+    end
+  end
+
   def authorize_admin
     if !current_user
       flash[:alert] = 'Please Sign in to join tour!'
