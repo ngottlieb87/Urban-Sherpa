@@ -1,12 +1,13 @@
 <h1>Sign in</h1>
 <div class = "card form-group">
   <div class= "card-body">
-  <%= form_tag signin_path do %>
-    <%= label_tag :email %>
-    <%= text_field_tag :email %>
+  <%= form_for signin_path do %>
+    <p><%= label_tag :email %></p>
+    <span class="sign_in"><%= text_field_tag :email %></span>
     <br>
-    <%= label_tag :password %>
-    <%= password_field_tag :password %>
+    <p><%= label_tag :password %></p>
+    <span class="sign_in"><%= password_field_tag :password %></span>
+    <br>
     <br>
     <%= submit_tag "Sign in", id: "sign_in_button", :class => "btn btn-success" %>
   <% end %>
