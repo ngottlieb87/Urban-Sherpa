@@ -4,14 +4,15 @@
   <div class = "col-md-4">
     <div class = "card">
       <div class = "card-body">
-        <%= image_tag(@tour.photo.url(:medium))%>
+        <%= image_tag @tour.photo.url(:medium), class: "tour_img"%>
         <% if is_guide? && current_user.id == @tour.user.id || is_admin? %>
           <%= link_to "Edit", edit_tour_path(@tour) %> |
           <%= link_to "Delete", tour_path(@tour),
           :data=>{:confirm => "Are You Sure?", :method => "delete"}%>
         <% end %></p>
-        Hosted By: <%= @tour.user.user_name %>
-        <%= image_tag(@tour.user.avatar.url(:small))%></br>
+        Hosted By: <%= @tour.user.user_name %> <%=image_tag @tour.user.avatar.url(:small),class:"avatar"%>
+        <br>
+        <br>
         Description: <%= @tour.description%></li>
         Location: <%= @tour.location %></li>
         <%= form_for @tour_order do |f| %>

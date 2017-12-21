@@ -4,11 +4,11 @@
   <div class ="row">
 
   <% @tours.each do |tour| %>
-    <div class = "col-lg-4">
+    <div class = "col-md-4">
       <div class = "card">
           <div class = "card-body">
           <h1><%= link_to tour.title, tour_path(tour) %></h1>
-           <p><%= link_to image_tag(tour.photo.url(:medium)), tour_path(tour) %></p>
+          <%= link_to image_tag(tour.photo.url(:medium),class:"tour_img"), tour_path(tour) %>
           <p>"<%= tour.description %>"</p>
             <p>Price: <%= number_to_currency tour.price %></p>
             <p>Tour Date: <%= tour.date %></p>
@@ -21,11 +21,11 @@
   <div class ="row">
 
   <% @tours.each do |tour| %>
-    <div class = "col-lg-4">
+    <div class = "col-md-4">
       <div class = "card">
           <div class = "card-body">
           <h1><%= link_to tour.title, tour_path(tour) %></h1>
-            <p><%= link_to image_tag(tour.photo.url(:medium)), tour_path(tour) %></p>
+            <%= link_to image_tag(tour.photo.url(:medium),class:"tour_img"), tour_path(tour)%>
             <p>"<%= tour.description %>"</p>
             <p>Price: <%= number_to_currency tour.price %></p>
             <p>Tour Date: <%= tour.date %></p>

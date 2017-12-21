@@ -1,22 +1,25 @@
 User.destroy_all
 Tour.destroy_all
 
-20.times do |index|
+10.times do
+
   User.create!( email: Faker::Internet.email ,
                 user_name:Faker::Hacker.verb,
                 admin: false,
                 guide: true,
-                password: "Password1"
-                )
+                password: "Password1",
+                avatar: URI.parse(Faker::LoremPixel.image))
+
   end
 
-20.times do |index|
+10.times do
   Tour.create!( title: Faker::Zelda.game,
+                photo: URI.parse(Faker::LoremPixel.image),
                 price: rand(10...100),
                 description: Faker::Lorem.sentence(5, false,0).chop,
                 location: Faker::Zelda.location,
                 date: Faker::Date.between(2.days.ago, Date.today),
-                user_id: rand(1...20))
+                user_id: rand(1...10))
   end
 
 p "Created #{User.count} users"
