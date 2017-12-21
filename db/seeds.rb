@@ -2,12 +2,12 @@ User.destroy_all
 Tour.destroy_all
 
 20.times do |index|
-  User.create!( email: Faker::Hacker.verb + "@gmail.com" ,
+  User.create!( email: Faker::Internet.email ,
                 user_name:Faker::Hacker.verb,
                 admin: false,
                 guide: true,
                 password: "Password1",
-                avatar: URI.parse(Faker::Avatar.image))
+                avatar: URI.parse(Faker::LoremPixel.image))
 
   end
 
