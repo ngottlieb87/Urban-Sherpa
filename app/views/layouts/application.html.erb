@@ -6,14 +6,15 @@
     <%= favicon_link_tag asset_path('favicon.png'), :rel => 'icon', :type =>  'image/png' %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
   </head>
 
   <body>
     <div class = "container">
     <% if current_user %>
-        <%= current_user.email %> <span id="pipe">|</span> <%= link_to "Sign out", '/signout', id: "signout"%> | <%= link_to "Your Tours | #{tour_cart}", cart_path %> | <%= link_to "Home", tours_path %>
+        <p><%= current_user.email %> <span id="pipe">|</span> <%= link_to "Sign out", '/signout', id: "signout"%> | <%= link_to "Your Itinerary | #{tour_cart}", cart_path %> | <%= link_to "Home", tours_path %></p>
       <% else %>
-        <%= link_to "Sign up", '/signup', id:'sign_up'%> | <%= link_to "Sign in", '/signin', id:'sign_in'%> | <%= link_to "Home", tours_path %>
+        <p><%= link_to "Sign up", '/signup', id:'sign_up'%> | <%= link_to "Sign in", '/signin', id:'sign_in'%> | <%= link_to "Home", tours_path %></p>
       <% end %>
       <%= flash[:alert] %>
       <%= flash[:notice] %>

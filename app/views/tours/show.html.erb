@@ -13,8 +13,10 @@
         Hosted By: <%= @tour.user.user_name %> <%=image_tag @tour.user.avatar.url(:small),class:"avatar"%>
         <br>
         <br>
-        Description: <%= @tour.description%></li>
-        Location: <%= @tour.location %></li>
+        Description: <%= @tour.description%>
+        <br>
+        <br>
+        Location: <%= @tour.location %>
         <%= form_for @tour_order do |f| %>
           <br>
           <%= f.label "Number of People Attending"%>
@@ -41,11 +43,12 @@
         <hr>
         <% end %>
       <% else %>
-
+      <div class = "card comment">
         <p class= "addComment">There are currently no comments for this tour.</p>
            <% if current_user %>
            <p>Been on this tour? <%= link_to "Let others know what you think about it!", new_tour_comment_path(@tour), remote: true%></p>
            <% end %>
+        </div>
     <% end %>
       <span id= "displayComment"></span>
       </div>

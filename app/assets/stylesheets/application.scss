@@ -15,7 +15,16 @@
  <body class="<%= controller.controller_name%>">
  */
  @import "bootstrap";
+h1{
+  font-family: 'Open Sans', sans-serif;
+  text-shadow: 20%;
+}
 
+p{
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+
+}
 .tour_img{
   border-radius: 40px;
 }
@@ -30,4 +39,15 @@ body.charges{
 .card{
   margin-bottom: 20px;
   align-self: auto;
+  border-radius: 10px;
+}
+
+body{
+  background-image: url("http://www.publicdomainpictures.net/pictures/170000/velka/holiday-1463128399PLs.jpg");
+  background-size: 100%;
+}
+
+.comment{
+  padding: 20px;
+  border-radius: 10px;
 }
