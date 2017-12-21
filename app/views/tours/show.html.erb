@@ -5,7 +5,8 @@
     <div class = "card">
       <div class = "card-body">
         <%= image_tag(@tour.photo.url(:medium))%>
-        Hosted By: <%= @tour.user.user_name %></br>
+        Hosted By: <%= @tour.user.user_name %>
+        <%= image_tag(@tour.user.avatar.url(:small))%></br>
         Description: <%= @tour.description%></li>
         Location: <%= @tour.location %></li>
         <%= form_for @tour_order do |f| %>
