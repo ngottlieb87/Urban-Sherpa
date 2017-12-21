@@ -29,6 +29,11 @@
             <p>"<%= tour.description %>"</p>
             <p>Price: <%= number_to_currency tour.price %></p>
             <p>Tour Date: <%= tour.date %></p>
+            <% if is_admin? %>
+              <%= link_to "Edit", edit_tour_path(tour) %> |
+              <%= link_to "Delete", tour_path(tour),
+            :data=>{:confirm => "Are You Sure?", :method => "delete"}%>
+            <% end %>
           </div>
       </div>
     </div>
