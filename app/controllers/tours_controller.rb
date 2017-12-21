@@ -1,4 +1,5 @@
 class ToursController < ApplicationController
+  before_action :authorize, only: [:show]
   before_action :authorize_guide && :authorize_admin, only: [:edit,:create,:update,:destroy]
   def index
     @tours = Tour.all
@@ -47,6 +48,6 @@ class ToursController < ApplicationController
   private
 
   def tour_params
-    params.require(:tour).permit(:user_name, :photo, :title, :price, :description, :location, :date, :time, :user_id)
+    params.require(:tour).permit(:user_name, :photo, :title, :price, :description, :location, :date, :time, :user_id, :accunt_id)
   end
 end

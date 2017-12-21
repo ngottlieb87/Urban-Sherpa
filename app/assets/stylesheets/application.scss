@@ -12,8 +12,10 @@
  *
  *= require_tree .
  *= require_self
+ <body class="<%= controller.controller_name%>">
  */
  @import "bootstrap";
+
 .tour_img{
   border-radius: 40px;
 }
@@ -21,8 +23,11 @@
   border-radius: 40px;
 }
 
+body.charges{
+  background-color: red;
+}
 
 .card{
-  margin: inherit;
+  margin-bottom: 20px;
   align-self: auto;
 }

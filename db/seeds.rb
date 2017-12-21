@@ -1,4 +1,5 @@
 User.destroy_all
+Account.destroy_all
 Tour.destroy_all
 
 10.times do
@@ -13,6 +14,14 @@ Tour.destroy_all
   end
 
 10.times do
+
+  Account.create!(
+                   user_id: Faker::Number.between(User.first.id,User.last.id))
+
+    end
+
+
+10.times do
   Tour.create!( title: Faker::Zelda.game,
                 photo: URI.parse(Faker::LoremPixel.image),
                 price: rand(10...100),
@@ -24,3 +33,4 @@ Tour.destroy_all
 
 p "Created #{User.count} users"
 p "Created #{Tour.count} tours"
+p "Created #{Account.count} accounts"
