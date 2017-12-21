@@ -11,7 +11,7 @@
   <%= f.date_field :date, class: "form-control"%>
   <%= f.time_field :time, class: "form-control"%>
   <%= f.label "What Would You like for Compensation?" %>
-  <%= f.number_field :price, class:"form-control"%>
+  <%= f.number_field :price, min: 1,  class:"form-control"%>
   <br>
   <%= f.file_field :photo, class: "form-control" %>
   <br>
