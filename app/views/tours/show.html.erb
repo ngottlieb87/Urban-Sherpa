@@ -34,7 +34,11 @@
         <hr>
         <% end %>
       <% else %>
-        <p class= "addComment">There are no comments for this tour. Been this tour? <%= link_to "Let others know what you think about it!", new_tour_comment_path(@tour), remote: true%></p>
+
+        <p class= "addComment">There are currently no comments for this tour.</p>
+           <% if current_user %>
+           <p>Been on this tour? <%= link_to "Let others know what you think about it!", new_tour_comment_path(@tour), remote: true%></p>
+           <% end %>
     <% end %>
       <span id= "displayComment"></span>
       </div>
