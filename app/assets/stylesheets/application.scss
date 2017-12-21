@@ -15,6 +15,28 @@
  <body class="<%= controller.controller_name%>">
  */
  @import "bootstrap";
+ a:link {
+   color: #263238;
+ }
+
+ a:visited {
+   color: #263238 ;
+ }
+
+ a:hover {
+   color: #34515e;
+ }
+
+ a:active {
+   color: #607d8b;
+ }
+
+.nav-top{
+  font-weight: bold;
+}
+.nav-bottom{
+  font-weight: bold;
+}
 h1{
   font-family: 'Open Sans', sans-serif;
   text-shadow: 20%;
@@ -23,11 +45,12 @@ h1{
 p{
   font-family: 'Open Sans', sans-serif;
   font-size: 18px;
-
 }
+
 .tour_img{
   border-radius: 40px;
 }
+
 .avatar{
   border-radius: 40px;
 }

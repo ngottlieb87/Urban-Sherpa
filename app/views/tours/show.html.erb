@@ -19,7 +19,7 @@
         Location: <%= @tour.location %>
         <%= form_for @tour_order do |f| %>
           <br>
-          <%= f.label "Number of People Attending"%>
+          <%= f.label "Number in Party?(Max 5)"%>
           <%= f.number_field :quantity, in: 1..5, class:"form-control" %>
           <%= f.hidden_field :tour_id, value: @tour.id %>
           <br>

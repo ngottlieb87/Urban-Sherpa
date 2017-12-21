@@ -12,9 +12,9 @@
   <body>
     <div class = "container">
     <% if current_user %>
-        <p><%= current_user.email %> <span id="pipe">|</span> <%= link_to "Sign out", '/signout', id: "signout"%> | <%= link_to "Your Itinerary | #{tour_cart}", cart_path %> | <%= link_to "Home", tours_path %></p>
+        <p class="nav-top"><%= current_user.email %> <span id="pipe">|</span> <%= link_to "Sign out", '/signout', id: "signout", style: ''%> | <%= link_to "Your Itinerary | #{tour_cart}", cart_path %> | <%= link_to "Home", tours_path %></p>
       <% else %>
-        <p><%= link_to "Sign up", '/signup', id:'sign_up'%> | <%= link_to "Sign in", '/signin', id:'sign_in'%> | <%= link_to "Home", tours_path %></p>
+        <p class="nav-bottom"><%= link_to "Sign up", '/signup', id:'sign_up'%> | <%= link_to "Sign in", '/signin', id:'sign_in'%> | <%= link_to "Home", tours_path %></p>
       <% end %>
       <%= flash[:alert] %>
       <%= flash[:notice] %>
