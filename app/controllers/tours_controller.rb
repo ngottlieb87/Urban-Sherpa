@@ -13,10 +13,6 @@ class ToursController < ApplicationController
     @tour = Tour.new
   end
 
-  def edit
-    @tour = Tour.find(params[:id])
-  end
-
   def create
     @tour = Tour.new(tour_params)
     if @tour.save
@@ -24,6 +20,27 @@ class ToursController < ApplicationController
       redirect_to tours_path
     else
       render :new
+    end
+  end
+
+  def edit
+    @tour = Tour.find(params[:id])
+  end
+
+  def update
+    @tour = Tour.find(params[:id])
+    if @tour.update(tour_params)
+      flash[:notice] = "Tour Updated"
+      redirect_to tours_path
+    else
+      render :edit
+    end
+
+    def destroy
+      @tour = Tour.find(params[:id])
+      @tour.destroy
+      flash[:notice] = "Tour has been removed!"
+      redirect_to tours_path
     end
   end
 

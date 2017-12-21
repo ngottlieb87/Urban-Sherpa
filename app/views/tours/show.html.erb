@@ -5,6 +5,11 @@
     <div class = "card">
       <div class = "card-body">
         <%= image_tag(@tour.photo.url(:medium))%>
+        <% if is_guide? && current_user.id == @tour.user.id %>
+          <%= link_to "Edit", edit_tour_path(@tour) %> |
+          <%= link_to "Delete", tour_path(@tour),
+          :data=>{:confirm => "Are You Sure?", :method => "delete"}%>
+        <% end %></p>
         Hosted By: <%= @tour.user.user_name %>
         <%= image_tag(@tour.user.avatar.url(:small))%></br>
         Description: <%= @tour.description%></li>

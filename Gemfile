@@ -32,7 +32,7 @@ gem 'rails_admin'
 gem 'socialization'
 gem 'will_paginate', '~> 3.1.0'
 gem 'bcrypt', '~> 3.1.7'
-gem "paperclip", "~> 5.0.0"
+gem "paperclip"
 gem 'stripe'
 gem 'acts_as_votable', '~> 0.11.1'
 # Use Redis adapter to run Action Cable in production
