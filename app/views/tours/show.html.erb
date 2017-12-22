@@ -6,6 +6,7 @@
       <div class = "card-body">
         <%= image_tag @tour.photo.url(:medium), class: "tour_img"%>
         <% if is_guide? && current_user.id == @tour.user.id || is_admin? %>
+        <br>
           <%= link_to "Edit", edit_tour_path(@tour) %> |
           <%= link_to "Delete", tour_path(@tour),
           :data=>{:confirm => "Are You Sure?", :method => "delete"}%>
