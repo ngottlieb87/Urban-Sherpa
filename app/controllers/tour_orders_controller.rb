@@ -5,7 +5,6 @@ class TourOrdersController < ApplicationController
     @order = current_order
     @tour = @order.tour_orders.new(tour_params)
     @order.account_id = current_user.id
-    binding.pry
     @order.save!
 
     session[:order_id] = @order.id

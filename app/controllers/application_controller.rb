@@ -27,7 +27,7 @@ class ApplicationController < ActionController::Base
   end
 
   def authorize_admin
-    if !current_user
+    if !current_user.admin
       flash[:alert] = 'Admin Only!'
       redirect_to tours_path
     end

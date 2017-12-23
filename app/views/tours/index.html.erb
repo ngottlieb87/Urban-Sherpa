@@ -1,8 +1,7 @@
 <% if is_guide? %>
-  <button class="btn btn-warning"><%=link_to "Create A Tour", new_tour_path %></button>
+<%= link_to "Create A Tour", new_tour_path, class: "btn btn-warning" %>
 
   <div class ="row">
-
   <% @tours.each do |tour| %>
     <div class = "col-md-4">
       <div class = "card">
