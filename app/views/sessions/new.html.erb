@@ -1,15 +1,15 @@
 <h1>Sign in</h1>
 <div class = "card form-group">
   <div class= "card-body">
-  <%= form_for signin_path do |f| %>
-    <p><%= f.label :email %></p>
-    <%= f.text_field :email, class: 'form-control' %>
+  <%= form_tag signin_path do %>
+    <p>Email</p>
+    <%= text_field_tag :email%>
     <br>
-    <p><%= f.label :password %></p>
-    <%= f.password_field :password, class: 'form-control' %>
+    <p>Password</p>
+    <%= password_field_tag :password%>
     <br>
     <br>
-    <%= f.submit "Sign in", id: "sign_in_button", :class => "btn btn-success form-control" %>
+    <%= submit_tag "Sign in", id: "sign_in_button", :class => "btn btn-success" %>
   <% end %>
   </div>
 </div>
