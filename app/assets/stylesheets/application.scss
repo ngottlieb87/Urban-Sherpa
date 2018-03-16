@@ -31,12 +31,12 @@
    color: #607d8b;
  }
 
-.nav-top{
-  font-weight: bold;
-}
-.nav-bottom{
-  font-weight: bold;
-}
+// .nav-top{
+//   font-weight: bold;
+// }
+// .nav-bottom{
+//   font-weight: bold;
+// }
 h1{
   font-family: 'Open Sans', sans-serif;
   text-shadow: 20%;
@@ -82,4 +82,8 @@ button{
 .pay{
   text-align: center;
   margin: -20px;
+}
+.navbar{
+  position:fixed;
+  z-index: 9;
 }
