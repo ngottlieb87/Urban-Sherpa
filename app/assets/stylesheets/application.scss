@@ -57,10 +57,10 @@ p{
 
 
 .card{
+  margin-top: 20px;
   margin-bottom: 20px;
   align-self: auto;
   border-radius: 10px;
-  display: flex;
 }
 
 body{
@@ -73,9 +73,11 @@ body{
   padding: 20px;
   border-radius: 10px;
 }
+
 .back{
   text-align: center;
 }
+
 button{
   margin-left: 5px;
 }
@@ -86,4 +88,21 @@ button{
 .navbar{
   position:fixed;
   z-index: 9;
+  margin-bottom: 10px;
+}
+.navbar-nav > li{
+  margin-left:20px;
+  margin-right:20px;
+}
+
+.alert{
+  color: red;
+}
+
+.notice{
+  color: lightgreen;
+}
+
+.dropdown-menu > a{
+  margin-left: 10px;
 }
