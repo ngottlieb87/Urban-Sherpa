@@ -18,6 +18,8 @@
         <br>
         <br>
         Location: <%= @tour.location %>
+        <br>
+        Time: <%=@tour.time.strftime("%I:%M%P")%>
         <%= form_for @tour_order do |f| %>
           <br>
           <%= f.label "Number in Party?(Max 5)"%>
