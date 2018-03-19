@@ -28,6 +28,9 @@
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <a class="dropdown-item"><%= link_to "Profile", "#"%></a>
                 <a class="dropdown-item"><%= link_to "Itinerary | #{tour_cart}", cart_path %></a>
+                <% if is_guide? %>
+                <a class="dropdown-item"><%= link_to "Create A Tour", new_tour_path%></a>
+                <% end %>
                 <div class="dropdown-divider"></div>
                   <a class="dropdown-item"><%= link_to "Sign Out", "/signout"%></a>
               </div>
