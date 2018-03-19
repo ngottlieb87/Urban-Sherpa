@@ -30,13 +30,9 @@
  a:active {
    color: #607d8b;
  }
-
-.nav-top{
-  font-weight: bold;
-}
-.nav-bottom{
-  font-weight: bold;
-}
+ .signInUp{
+   margin-top:20px;
+ }
 h1{
   font-family: 'Open Sans', sans-serif;
   text-shadow: 20%;
@@ -57,10 +53,10 @@ p{
 
 
 .card{
+  margin-top: 20px;
   margin-bottom: 20px;
   align-self: auto;
   border-radius: 10px;
-  display: flex;
 }
 
 body{
@@ -73,13 +69,36 @@ body{
   padding: 20px;
   border-radius: 10px;
 }
+
 .back{
   text-align: center;
 }
+
 button{
   margin-left: 5px;
 }
 .pay{
   text-align: center;
   margin: -20px;
+}
+.navbar{
+  position:fixed;
+  z-index: 9;
+  margin-bottom: 10px;
+}
+.navbar-nav > li{
+  margin-left:20px;
+  margin-right:20px;
+}
+
+.alert{
+  color: red;
+}
+
+.notice{
+  color: lightgreen;
+}
+
+.dropdown-menu > a{
+  margin-left: 10px;
 }
