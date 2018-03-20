@@ -58,7 +58,9 @@ p{
   align-self: auto;
   border-radius: 10px;
 }
-
+.signUpCard{
+  margin-top:80px;
+}
 body{
   background-image: url("http://www.publicdomainpictures.net/pictures/170000/velka/holiday-1463128399PLs.jpg");
   background-size: 100%;
@@ -93,6 +95,8 @@ button{
 .alert{
   float: right;
   color: red;
+  margin-top:10px;
+  margin-bottom:-10px;
 }
 
 .notice{
@@ -106,4 +110,7 @@ button{
 
 .tour_title{
   margin-top: 20px;
+}
+.price{
+  float: right;
 }
