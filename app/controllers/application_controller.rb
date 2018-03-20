@@ -21,7 +21,7 @@ class ApplicationController < ActionController::Base
 
   def authorize
     if !current_user
-      flash[:alert] = 'Please sign in to access'
+      flash[:alert] = 'Please sign in'
       redirect_to tours_path
     end
   end

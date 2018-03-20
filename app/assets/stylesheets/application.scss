@@ -92,13 +92,19 @@ button{
 }
 
 .alert{
+  float: right;
   color: red;
 }
 
 .notice{
+  float: right;
   color: lightgreen;
 }
 
 .dropdown-menu > a{
   margin-left: 10px;
+}
+
+.tour_title{
+  margin-top: 20px;
 }
