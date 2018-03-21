@@ -3,14 +3,13 @@ Rails.application.routes.draw do
 
   get '/signup' => 'users#new'
   post '/users' => 'users#create'
-
+  get '/users/:id' => 'users#show'
   get '/signin' => 'sessions#new'
   post '/signin' => 'sessions#create'
   get '/signout' => 'sessions#destroy'
 
 
   resource :cart, only: [:show]
-
   resources :charges
 
   resources :tours do
