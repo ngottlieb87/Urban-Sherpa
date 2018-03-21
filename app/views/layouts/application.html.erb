@@ -23,7 +23,7 @@
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><%= current_user.user_name%></a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item"><%= link_to "Profile", "#"%></a>
+          <a class="dropdown-item"><%= link_to "Profile", users_path(@user)%></a>
           <a class="dropdown-item"><%= link_to "Itinerary | #{tour_cart}", cart_path %></a>
           <% if is_guide? %>
           <a class="dropdown-item"><%= link_to "Create A Tour", new_tour_path%></a>
