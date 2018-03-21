@@ -1,9 +1,18 @@
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<p><%= @user.email %></p>
-<p><%= @user.user_name %></p>
+<div class="card">
+  <div class="card-body">
+    <p>Email: <%= @user.email %></p>
+    <p>Username: <%= @user.user_name %></p>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-body">
+    <% @user.account.orders.each do |tours| %>
+      <% tours.tour_orders.each do |tour_info| %>
+        <li><%= tour_info.tour.title%></li>
+      <% end %>
+      <li><%= number_to_currency tours.total_price %></li>
+      <hr>
+    <% end %>
+  </div>
+</div>
