@@ -27,6 +27,13 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
   end
 
+  def destroy
+    user_tour = current_user.account.tour_orders.orders.tours.id
+    user_tour.destroy
+    flash[:notice] = "Tour has been removed!"
+    redirect_to "/users/#{current_user.id}"
+  end
+
   private
 
   def user_params

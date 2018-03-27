@@ -114,3 +114,9 @@ button{
 .price{
   float: right;
 }
+.profile{
+  list-style:none;
+}
+.profile > li{
+  margin-left: 10px;
+}
