@@ -18,8 +18,9 @@ Rails.application.routes.draw do
   end
 
   resources :users do
-    :tours
+    resources :tours
   end
+
   resources :tour_orders do
     resources :orders
   end

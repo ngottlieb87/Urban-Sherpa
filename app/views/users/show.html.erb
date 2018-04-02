@@ -15,14 +15,14 @@
 <div class="card">
   <div class="card-body profile">
     <h2>Your Tours</h2>
-    <% if @user.account.orders.any? %>
-    <% @user.account.orders.each do |tours| %>
+    <% if current_user.account.orders.any? %>
+    <% current_user.account.orders.each do |tours| %>
       <% tours.tour_orders.each do |tour_info| %>
         <h4><%= tour_info.tour.title%></h4>
         <li>Price: <%= number_to_currency tour_info.tour.price%></li>
         <li>Group Size: <%= tour_info.quantity%></li>
         <li>Location: <%= tour_info.tour.location %></li>
-        <p class="delete"><%= link_to "Remove Tour", tour_path(tours),
+        <p class="delete"><%= link_to "Remove Tour", user_path(tours),
           :data=>{:confirm => "Are You Sure?", :method => "delete"}%></p>
         <br>
       <% end %>
