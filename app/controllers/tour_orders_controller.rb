@@ -12,6 +12,17 @@ class TourOrdersController < ApplicationController
     redirect_to tours_path
   end
 
+  def destroy
+    @tour_orders = current_order.tour_orders
+    @account = Account.find(current_user.id)
+    @open_orders = @account.orders
+    @order = current_order
+    @tour = @order.tour_orders.find(params[:id])
+    @tour.destroy
+    @order.save
+    redirect_to cart_path
+  end
+
   private
 
   def tour_params

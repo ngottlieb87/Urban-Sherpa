@@ -22,7 +22,7 @@
         <li>Price: <%= number_to_currency tour_info.tour.price%></li>
         <li>Group Size: <%= tour_info.quantity%></li>
         <li>Location: <%= tour_info.tour.location %></li>
-        <p class="delete"><%= link_to "Remove Tour", user_path(tours),
+        <p class="delete"><%= link_to "Remove Tour", user_path(tour_info.tour),
           :data=>{:confirm => "Are You Sure?", :method => "delete"}%></p>
         <br>
       <% end %>

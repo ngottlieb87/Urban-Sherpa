@@ -38,8 +38,8 @@ class ToursController < ApplicationController
     end
 
     def destroy
-      @tour = Tour.find(params[:id])
-      @tour.destroy
+      @tour = current_user.account.orders.tour_orders.Tour.find(params[:id])
+      binding.pry
       flash[:notice] = "Tour has been removed!"
       redirect_to tours_path
     end

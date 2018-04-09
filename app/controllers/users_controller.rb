@@ -28,11 +28,10 @@ class UsersController < ApplicationController
   end
 
   def destroy
-    @tour_info = current_user.account.orders.find(params[:id])
-    # find relation to tour from user Profile
-    binding.pry
+    @tour = Tour.find(params[:id])
+    @tour.destroy
     flash[:notice] = "Tour has been removed!"
-    redirect_to "/users/#{current_user.id}"
+    redirect_to tours_path
   end
 
   private
@@ -40,6 +39,5 @@ class UsersController < ApplicationController
   def user_params
     params.require(:user).permit(:user_name, :email, :admin, :guide, :password, :password_confirmation, :avatar, :id)
   end
-
 
 end
