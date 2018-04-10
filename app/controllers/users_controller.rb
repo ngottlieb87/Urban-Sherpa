@@ -27,6 +27,13 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
   end
 
+  def destroy
+    @tour = Tour.find(params[:id])
+    @tour.destroy
+    flash[:notice] = "Tour has been removed!"
+    redirect_to tours_path
+  end
+
   private
 
   def user_params

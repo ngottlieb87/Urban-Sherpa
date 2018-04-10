@@ -4,13 +4,14 @@
     <hr>
     <% if @tour_orders.any? %>
       <% @tour_orders.each do |item| %>
-      <p><strong><%= item.tour.title %> </strong><%= number_to_currency item.tour.price%></p>
+      <p><strong><%= item.tour.title %> </strong><%= number_to_currency item.tour.price%> <%= link_to "Remove", tour_order_path(item),
+          :data=>{:confirm => "Are You Sure?", :method => "delete"}%></p>
       <strong><p>Number in tour: <%= item.quantity%></p></strong>
       <hr>
       <% end %>
       <h4> Your Total: <%= number_to_currency current_order.total_price %></h4>
       <br>
-    <%= link_to "Checkout", new_charge_path, class: "btn btn-primary" %> 
+    <%= link_to "Checkout", new_charge_path, class: "btn btn-primary" %>
     <% else %>
       <p><%= "You havent signed up for any tours yet."%> <%= link_to "Go and check'em out!", tours_path %></p>
     <% end %>
