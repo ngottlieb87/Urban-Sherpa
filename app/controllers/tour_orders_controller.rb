@@ -20,6 +20,7 @@ class TourOrdersController < ApplicationController
     @tour = @order.tour_orders.find(params[:id])
     @tour.destroy
     @order.save
+    flash[:notice] = "Tour Removed"
     redirect_to cart_path
   end
 
