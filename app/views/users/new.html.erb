@@ -2,24 +2,24 @@
   <h1 class="signInUp">Sign Up!</h1>
   <div class = "card-body">
     <%= form_for @user do |f| %>
-    <%= f.label :email %>
-    <%= f.text_field :email, class: 'form-control'%>
-    <%= f.label "Password: Password Requires 7-15 characters including at least 1 upper and lower case letter, and 1 digit" %>
-    <%= f.password_field :password, class: 'form-control' %>
-    <%= f.label :password_confirmation %>
-    <%= f.password_field :password_confirmation, class: 'form-control' %>
-    <%= f.label :user_name %>
-    <%= f.text_field :user_name, class: 'form-control'%>
-    <%= f.label "Would you like to be a Guide or will you Attend tours?" %>
-    <br>
-    <%= f.select(:guide, options_for_select([['Attendee', false], ['Guide', true]]))  %>
-    <br>
-    <br>
-    <%= f.label "Pick an image for your avatar."%>
-    <%= f.file_field :avatar, :class => "form-control" %>
-    <br>
-    <br>
-    <%= f.submit "Sign Up", class: 'btn btn-success form-control' %>
+      <%= f.label :email %>
+      <%= f.text_field :email, class: 'form-control'%>
+      <%= f.label "Password: Password Requires 7-15 characters including at least 1 upper and lower case letter, and 1 digit" %>
+      <%= f.password_field :password, class: 'form-control' %>
+      <%= f.label :password_confirmation %>
+      <%= f.password_field :password_confirmation, class: 'form-control' %>
+      <%= f.label :user_name %>
+      <%= f.text_field :user_name, class: 'form-control'%>
+      <%= f.label "Would you like to be a Guide or will you Attend tours?" %>
+      <br>
+      <%= f.select(:guide, options_for_select([['Attendee', false], ['Guide', true]]))  %>
+      <br>
+      <br>
+      <%= f.label "Pick an image for your avatar."%>
+      <%= f.file_field :avatar, :class => "form-control" %>
+      <br>
+      <br>
+      <%= f.submit "Sign Up", class: 'btn btn-success form-control' %>
     <% end %>
     <br>
     <h4 class= "back"><%= link_to "Back to Tours", tours_path %></h4>
