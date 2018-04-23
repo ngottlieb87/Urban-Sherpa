@@ -6,7 +6,6 @@ class TourOrdersController < ApplicationController
     @tour = @order.tour_orders.new(tour_params)
     @order.account_id = current_user.id
     @order.save!
-
     session[:order_id] = @order.id
     flash[:notice] = "Tour added to Your Itinerary"
     redirect_to tours_path
