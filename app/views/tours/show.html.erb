@@ -36,7 +36,7 @@
       <div class= "card">
           <h3>Comments for <%= @tour.title %></h3>
           <% if current_user %>
-            <p id="hide_comment_link"><%=link_to "Leave a comment", new_tour_comment_path(@tour), remote: true%></p>
+            <span id="hideCommentLink"><%=link_to "Leave a comment", new_tour_comment_path(@tour), remote: true%></span>
           <% end %>
         <div class= "card-body">
         <% @tour.comments.each do |comment| %>
