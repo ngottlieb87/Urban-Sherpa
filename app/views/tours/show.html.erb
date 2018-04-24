@@ -36,7 +36,7 @@
       <div class= "card">
           <h3>Comments for <%= @tour.title %></h3>
           <% if current_user %>
-            <p id="hide_comment_link"><%=link_to "Leave a comment", new_tour_comment_path(@tour), remote: true%></p>
+            <%=link_to "Leave a comment", new_tour_comment_path(@tour), remote: true%>
           <% end %>
         <div class= "card-body">
         <% @tour.comments.each do |comment| %>
@@ -45,15 +45,17 @@
         Comment By: <em><%= comment.user.user_name %></em> <%=image_tag comment.user.avatar.url(:small),class:"avatar"%>
         <hr>
         <% end %>
+        <span class= "displayComment"></span>
+
       <% else %>
       <div class = "card comment">
         <p class= "addComment">There are currently no comments for this tour.</p>
            <% if current_user %>
            <p>Been on this tour? <%= link_to "Let others know what you think about it!", new_tour_comment_path(@tour), remote: true%></p>
            <% end %>
+           <span class= "displayComment"></span>
         </div>
     <% end %>
-      <span id= "displayComment"></span>
       </div>
     </div>
   </div>

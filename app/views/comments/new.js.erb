@@ -1,2 +1,2 @@
-$("#displayComment").after("<%= j render 'form' %>").slideToggle(800);
-$("#hide_comment_link").hide();
+$(".displayComment").html("<%= j render 'form' %>");
+$(".displayComment").slideDown(800);
