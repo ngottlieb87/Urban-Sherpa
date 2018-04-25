@@ -20,7 +20,7 @@ Rails.application.routes.draw do
   resources :accounts do
     resources :orders
   end
-  
+
   resources :users do
     resources :tours
   end
