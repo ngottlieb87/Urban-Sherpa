@@ -16,7 +16,3 @@
 //= require rails-ujs
 //= require turbolinks
 //= require_tree .
-
-$(document).ready(function(){
-  $(".alert.alert-dismissible.fade.show.card.alertCard").appendTo(".navbar.navbar-expand-lg.navbar-light.bg-light");
-});
