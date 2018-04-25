@@ -54,7 +54,7 @@ p{
 
 
 .card{
-  margin-top: 80px;
+  margin-top: 30px;
   margin-bottom: 20px;
   align-self: auto;
   border-radius: 10px;
@@ -137,7 +137,9 @@ button{
 .displayComment{
   display:none;
 }
+
 #dropdown_login{
   display:none;
-  float:right;
+  margin-left:160px;
+  margin-top: 0px;
 }
