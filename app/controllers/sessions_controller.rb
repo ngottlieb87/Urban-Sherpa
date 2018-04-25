@@ -4,10 +4,16 @@ class SessionsController < ApplicationController
     if @user
       flash[:notice] = "You've signed in."
       session[:user_id] = @user.id
-      redirect_to '/'
+      respond_to do |format|
+        format.html { redirect_to '/' }
+        format.js
+      end
     else
       flash[:alert] = "There was a problem signing in. Please try again."
-      redirect_to '/signin'
+      respond_to do |format|
+        format.html { redirect_to '/' }
+        format.js
+      end
     end
   end
 
