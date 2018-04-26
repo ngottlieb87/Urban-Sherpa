@@ -17,9 +17,9 @@ class ChargesController < ApplicationController
       :description => 'Rails Stripe Customer',
       :currency    => 'usd'
     )
-
+    current_order.update(:status => "paid");
+    binding.pry
     session[:order_id] = nil
-
   rescue Stripe::CardError => e
     flash[:error] = e.message
     redirect_to new_charge_path
