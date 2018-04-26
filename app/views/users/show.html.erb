@@ -5,9 +5,9 @@
     <p>Username: <%= @user.user_name %></p>
     <p>Account Type:
       <% if @user.guide === true %>
-        You're signed in as a guide!
+        Guide
         <% else %>
-        You're signed in as an attendee</p>
+        Explorer</p>
       <% end %>
   </div>
 </div>
@@ -16,22 +16,18 @@
   <div class="card-body profile">
     <h2>Your Tours</h2>
     <% if current_user.account.orders.any? %>
-    <% current_user.account.orders.each do |tours| %>
-      <% tours.tour_orders.each do |tour_info| %>
-        <h4><%= tour_info.tour.title%></h4>
-        <li>Price: <%= number_to_currency tour_info.tour.price%></li>
-        <li>Group Size: <%= tour_info.quantity%></li>
-        <li>Location: <%= tour_info.tour.location %></li>
-        <p class="delete"><%= link_to "Remove Tour", user_path(tour_info.tour),
-          :data=>{:confirm => "Are You Sure?", :method => "delete"}%></p>
-        <br>
-      <% end %>
-      <hr>
-      <h5>Total Price: <%= number_to_currency tours.total_price %></h5>
-      <hr>
+      <% current_user.account.orders.each do |order|  %>
+        <% if order.status === "paid" %>
+          <% order.tour_orders.each do |tour_info| %>
+            <%= tour_info.tour.title %>
+          <!-- add more info for past tours-->
+            <%end %>
+          <% elsif order.status === "In Progress" %>
+            <p>Tour Pending...</p>
+          <% end %>
+        <% end %>
+      <% else %>
+      <p> No Tours On Account </p>
     <% end %>
-    <% else %>
-    <p>Tour itenerary is empty. Get exploring!</p>
-    <%end %>
   </div>
 </div>

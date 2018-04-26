@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
   helper_method :is_admin?
   helper_method :is_guide?
   helper_method :current_order
-
+  
   def current_user
     if session[:user_id]
       @current_user = User.find(session[:user_id])
@@ -41,7 +41,7 @@ class ApplicationController < ActionController::Base
   end
 
   def current_order
-    if session[:order_id]
+    if session[:order_id] && Order.find(session[:order_id]).status != "paid"
       Order.find(session[:order_id])
     else
       Order.new
