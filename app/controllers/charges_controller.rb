@@ -18,7 +18,6 @@ class ChargesController < ApplicationController
       :currency    => 'usd'
     )
     current_order.update(:status => "paid");
-    binding.pry
     session[:order_id] = nil
   rescue Stripe::CardError => e
     flash[:error] = e.message
