@@ -1,6 +1,5 @@
 <div class = "card">
   <h2>Thanks For Choosing Urban Sherpa! Your Tour cost was: <strong><%= number_to_currency @amount%></strong>!</h2>
-  <% current_order.update(status: "paid") %>
   <% current_order = Order.new %>
   <h4><%= link_to "Venture Back To Tours!", tours_path %> </h4>
 </div>
