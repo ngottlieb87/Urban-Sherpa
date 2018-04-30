@@ -53,6 +53,7 @@ group :development, :test do
   gem "factory_bot_rails", "~> 4.0"
   gem 'simplecov', require: false
   gem 'dotenv-rails'
+  gem 'database_cleaner', '~> 1.7'
 end
 
 group :development do
@@ -63,6 +64,8 @@ group :development do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'letter_opener'
+  gem 'selenium-webdriver', '~> 3.11'
+  gem 'geckodriver-helper', '~> 0.0.5'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

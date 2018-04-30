@@ -4,6 +4,7 @@ FactoryBot.define do
     user_name('gregor')
     email('g@g.com')
     password('Password1')
+    guide(true)
   end
 
 end
