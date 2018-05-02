@@ -10,4 +10,13 @@ describe 'user sign in' do
     click_button "Sign in"
     expect(page).to have_content "You've signed in."
   end
+
+  it 'fail user sign in', js:true do
+    visit 'tours#index'
+    click_on 'Sign In'
+    fill_in 'email', :with =>"h@h.com "
+    fill_in 'password', :with =>"password"
+    click_button "Sign in"
+    expect(page).to have_content "There was a problem signing in. Please try again."
+  end
 end

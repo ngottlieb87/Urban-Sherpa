@@ -18,18 +18,11 @@ describe 'guide creates tour', js:true do
     fill_in "tour_price", :with => 50
     attach_file 'tour_photo', "#{Rails.root}/spec/images/party.jpeg"
     click_on "Create Tour"
-    expect(page).to have_content "Tour Created"
-  end
-
-  it 'fail tour creation', js:true do
-    visit 'tours#index'
-    click_on 'Sign In'
-    user = FactoryBot.create(:user)
-    fill_in 'email', :with => user.email
-    fill_in 'password', :with => user.password
-    click_button "Sign in"
-    visit new_tour_path
+    visit "tours/#{Tour.first.id}"
+    click_on "Edit"
+    fill_in 'tour_title', :with => "Lunar Hike"
     click_on "Create Tour"
-    expect(page).to have_content 'errors'
+    binding.pry
+    expect(page).to have_content "Tour Updated"
   end
 end
