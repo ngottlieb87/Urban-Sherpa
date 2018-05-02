@@ -13,9 +13,10 @@ describe 'guide creates tour', js:true do
     fill_in "tour_description", :with => "A hike at night"
     fill_in "tour_location", :with => "Portland,Or"
     fill_in "tour_date", :with=> "2019/01/01"
-    select(option, value="01", from: "tour_time_4i")
-    select(option, value="00", from: "tour_time_5i")
-    fill_in "price", :with => 50
+    find("#tour_time_4i").find(:option, "12 AM").select_option
+    find("#tour_time_5i").find(:option, "00").select_option
+    fill_in "tour_price", :with => 50
+    attach_file 'tour_photo',"#{Rails.root}/spec/images/party.jpeg"
     click_on "Create Tour"
     expect(page).to have_content "Tour Created"
   end
