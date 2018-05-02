@@ -12,7 +12,7 @@ class UsersController < ApplicationController
     account = Account.new
 
     if @user.save
-      flash[:notice] = "You've successfully signed up!"
+      flash[:notice] = "Thanks for signing up!"
       session[:user_id] = @user.id
       account.user_id = @user.id
       account.save

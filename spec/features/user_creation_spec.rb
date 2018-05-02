@@ -11,6 +11,6 @@ describe 'create new user sign up' do
     fill_in 'User name', :with => 'Howdy123'
     have_select 'guide', selected: 'Attendee'
     click_button "Sign Up"
-    expect(page).to have_content "You've successfully signed up!"
+    expect(page).to have_content "Thanks for signing up!"
   end
 end
