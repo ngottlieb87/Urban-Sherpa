@@ -14,4 +14,10 @@ describe 'create new user sign up' do
     click_button "Sign Up"
     expect(page).to have_content "Thanks for signing up!"
   end
+
+  it 'fail user creation' do
+    visit signup_path
+    click_button "Sign Up"
+    expect(page).to have_content "There was a problem signing up."
+  end
 end

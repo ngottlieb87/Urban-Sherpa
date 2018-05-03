@@ -25,7 +25,7 @@ describe 'guide creates tour', js:true do
     expect(page).to have_content "Tour Updated"
   end
 
-  it 'fails tour edit' do
+  it 'fails tour edit', js:true do
     visit 'tours#index'
     click_on 'Sign In'
     user = FactoryBot.create(:user)
