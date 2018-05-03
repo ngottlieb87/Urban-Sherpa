@@ -9,6 +9,8 @@
         <% else %>
         Explorer</p>
       <% end %>
+      <p class="delete"><%= link_to "Delete Account", user_path(@user),
+        :data=>{:confirm => "Are You Sure?", :method => "delete"}%></p>
   </div>
 </div>
 

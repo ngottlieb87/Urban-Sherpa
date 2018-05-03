@@ -28,9 +28,12 @@ class UsersController < ApplicationController
   end
 
   def destroy
-    @tour = Tour.find(params[:id])
-    @tour.destroy
-    flash[:notice] = "Tour has been removed!"
+    @user = User.find(params[:id])
+    @account = Account.find(current_user.id)
+    @account.destroy
+    @user.destroy
+    session[:user_id] = nil
+    flash[:notice] = "Account Removed!"
     redirect_to tours_path
   end
 
