@@ -7,4 +7,8 @@ FactoryBot.define do
     guide(true)
     avatar{ fixture_file_upload(Rails.root.join('spec', 'images', 'ghost.png'), 'image/png') }
   end
+
+  factory(:account) do
+    user_id 1
+  end
 end
