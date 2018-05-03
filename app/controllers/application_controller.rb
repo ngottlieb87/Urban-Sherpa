@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
   helper_method :is_admin?
   helper_method :is_guide?
   helper_method :current_order
-  
+
   def current_user
     if session[:user_id]
       @current_user = User.find(session[:user_id])
@@ -12,7 +12,7 @@ class ApplicationController < ActionController::Base
   end
 
   def is_admin?
-    current_user && current_user.admin
+    current_user.admin = true
   end
 
   def is_guide?
