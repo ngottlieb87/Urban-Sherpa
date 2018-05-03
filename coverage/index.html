@@ -14,27 +14,27 @@
       <img src="./assets/0.10.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2018-05-03T13:24:32-07:00">2018-05-03T13:24:32-07:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2018-05-03T14:56:37-07:00">2018-05-03T14:56:37-07:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="green">94.46%</span></span>
+    (<span class="covered_percent"><span class="green">95.59%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         3.22
+         3.45
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
-    <b>57</b> files in total.
-    <b>560</b> relevant lines. 
-    <span class="green"><b>529</b> lines covered</span> and
-    <span class="red"><b>31</b> lines missed </span>
+    <b>58</b> files in total.
+    <b>590</b> relevant lines. 
+    <span class="green"><b>564</b> lines covered</span> and
+    <span class="red"><b>26</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -77,7 +77,7 @@
         <td>29</td>
         <td>22</td>
         <td>7</td>
-        <td>29.7</td>
+        <td>34.6</td>
       </tr>
       
       <tr>
@@ -117,7 +117,7 @@
         <td>18</td>
         <td>18</td>
         <td>0</td>
-        <td>4.8</td>
+        <td>5.2</td>
       </tr>
       
       <tr>
@@ -127,7 +127,7 @@
         <td>24</td>
         <td>24</td>
         <td>0</td>
-        <td>1.4</td>
+        <td>1.8</td>
       </tr>
       
       <tr>
@@ -137,17 +137,17 @@
         <td>32</td>
         <td>32</td>
         <td>0</td>
-        <td>3.5</td>
+        <td>3.9</td>
       </tr>
       
       <tr>
         <td class="strong"><a href="#cc0342d54252468e844b0ab0a61fc40d764ec9e3" class="src_link" title="app/controllers/users_controller.rb">app/controllers/users_controller.rb</a></td>
-        <td class="red strong">76.92 %</td>
-        <td>43</td>
-        <td>26</td>
-        <td>20</td>
-        <td>6</td>
-        <td>1.0</td>
+        <td class="green strong">96.55 %</td>
+        <td>46</td>
+        <td>29</td>
+        <td>28</td>
+        <td>1</td>
+        <td>1.2</td>
       </tr>
       
       <tr>
@@ -177,7 +177,7 @@
         <td>3</td>
         <td>3</td>
         <td>0</td>
-        <td>27.3</td>
+        <td>31.3</td>
       </tr>
       
       <tr>
@@ -247,7 +247,7 @@
         <td>14</td>
         <td>14</td>
         <td>0</td>
-        <td>1.6</td>
+        <td>1.9</td>
       </tr>
       
       <tr>
@@ -277,7 +277,7 @@
         <td>22</td>
         <td>22</td>
         <td>0</td>
-        <td>4.6</td>
+        <td>5.0</td>
       </tr>
       
       <tr>
@@ -457,7 +457,7 @@
         <td>9</td>
         <td>9</td>
         <td>0</td>
-        <td>2.0</td>
+        <td>2.1</td>
       </tr>
       
       <tr>
@@ -516,6 +516,16 @@
         <td>23</td>
         <td>18</td>
         <td>18</td>
+        <td>0</td>
+        <td>1.0</td>
+      </tr>
+      
+      <tr>
+        <td class="strong"><a href="#6ff0700cd75b90d311e36e3877d66b6d1fc96cd8" class="src_link" title="spec/features/user_deletion_spec.rb">spec/features/user_deletion_spec.rb</a></td>
+        <td class="green strong">100.0 %</td>
+        <td>31</td>
+        <td>27</td>
+        <td>27</td>
         <td>0</td>
         <td>1.0</td>
       </tr>
@@ -784,14 +794,14 @@
           <code class="ruby">  def current_user</code>
         </li>
       
-        <li class="covered" data-hits="297" data-linenumber="9">
-          <span class="hits">297</span>
+        <li class="covered" data-hits="347" data-linenumber="9">
+          <span class="hits">347</span>
           
           <code class="ruby">    if session[:user_id]</code>
         </li>
       
-        <li class="covered" data-hits="280" data-linenumber="10">
-          <span class="hits">280</span>
+        <li class="covered" data-hits="327" data-linenumber="10">
+          <span class="hits">327</span>
           
           <code class="ruby">      @current_user = User.find(session[:user_id])</code>
         </li>
@@ -820,8 +830,8 @@
           <code class="ruby">  def is_admin?</code>
         </li>
       
-        <li class="covered" data-hits="9" data-linenumber="15">
-          <span class="hits">9</span>
+        <li class="covered" data-hits="12" data-linenumber="15">
+          <span class="hits">12</span>
           
           <code class="ruby">    current_user &amp;&amp; current_user.admin</code>
         </li>
@@ -844,8 +854,8 @@
           <code class="ruby">  def is_guide?</code>
         </li>
       
-        <li class="covered" data-hits="45" data-linenumber="19">
-          <span class="hits">45</span>
+        <li class="covered" data-hits="52" data-linenumber="19">
+          <span class="hits">52</span>
           
           <code class="ruby">    current_user &amp;&amp; current_user.guide</code>
         </li>
@@ -868,8 +878,8 @@
           <code class="ruby">  def authorize</code>
         </li>
       
-        <li class="covered" data-hits="7" data-linenumber="23">
-          <span class="hits">7</span>
+        <li class="covered" data-hits="9" data-linenumber="23">
+          <span class="hits">9</span>
           
           <code class="ruby">    if !current_user</code>
         </li>
@@ -952,8 +962,8 @@
           <code class="ruby">  def authorize_guide</code>
         </li>
       
-        <li class="covered" data-hits="19" data-linenumber="37">
-          <span class="hits">19</span>
+        <li class="covered" data-hits="21" data-linenumber="37">
+          <span class="hits">21</span>
           
           <code class="ruby">    if !current_user.guide</code>
         </li>
@@ -994,14 +1004,14 @@
           <code class="ruby">  def current_order</code>
         </li>
       
-        <li class="covered" data-hits="96" data-linenumber="44">
-          <span class="hits">96</span>
+        <li class="covered" data-hits="111" data-linenumber="44">
+          <span class="hits">111</span>
           
           <code class="ruby">    if session[:order_id] &amp;&amp; Order.find(session[:order_id]).status != &quot;paid&quot;</code>
         </li>
       
-        <li class="covered" data-hits="19" data-linenumber="45">
-          <span class="hits">19</span>
+        <li class="covered" data-hits="23" data-linenumber="45">
+          <span class="hits">23</span>
           
           <code class="ruby">      Order.find(session[:order_id])</code>
         </li>
@@ -1012,8 +1022,8 @@
           <code class="ruby">    else</code>
         </li>
       
-        <li class="covered" data-hits="77" data-linenumber="47">
-          <span class="hits">77</span>
+        <li class="covered" data-hits="88" data-linenumber="47">
+          <span class="hits">88</span>
           
           <code class="ruby">      Order.new</code>
         </li>
@@ -1472,44 +1482,44 @@
           <code class="ruby">  def create</code>
         </li>
       
-        <li class="covered" data-hits="10" data-linenumber="3">
-          <span class="hits">10</span>
+        <li class="covered" data-hits="11" data-linenumber="3">
+          <span class="hits">11</span>
           
           <code class="ruby">    @user = User.authenticate(params[:email], params[:password])</code>
         </li>
       
-        <li class="covered" data-hits="10" data-linenumber="4">
-          <span class="hits">10</span>
+        <li class="covered" data-hits="11" data-linenumber="4">
+          <span class="hits">11</span>
           
           <code class="ruby">    if @user</code>
         </li>
       
-        <li class="covered" data-hits="9" data-linenumber="5">
-          <span class="hits">9</span>
+        <li class="covered" data-hits="10" data-linenumber="5">
+          <span class="hits">10</span>
           
           <code class="ruby">      flash[:notice] = &quot;You&#39;ve signed in.&quot;</code>
         </li>
       
-        <li class="covered" data-hits="9" data-linenumber="6">
-          <span class="hits">9</span>
+        <li class="covered" data-hits="10" data-linenumber="6">
+          <span class="hits">10</span>
           
           <code class="ruby">      session[:user_id] = @user.id</code>
         </li>
       
-        <li class="covered" data-hits="9" data-linenumber="7">
-          <span class="hits">9</span>
+        <li class="covered" data-hits="10" data-linenumber="7">
+          <span class="hits">10</span>
           
           <code class="ruby">      respond_to do |format|</code>
         </li>
       
-        <li class="covered" data-hits="18" data-linenumber="8">
-          <span class="hits">18</span>
+        <li class="covered" data-hits="20" data-linenumber="8">
+          <span class="hits">20</span>
           
           <code class="ruby">        format.html { redirect_to &#39;/&#39; }</code>
         </li>
       
-        <li class="covered" data-hits="9" data-linenumber="9">
-          <span class="hits">9</span>
+        <li class="covered" data-hits="10" data-linenumber="9">
+          <span class="hits">10</span>
           
           <code class="ruby">        format.js</code>
         </li>
@@ -1653,50 +1663,50 @@
           <code class="ruby">  def create</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="4">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="3" data-linenumber="4">
+          <span class="hits">3</span>
           
           <code class="ruby">    @tour_orders = current_order.tour_orders</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="5">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="3" data-linenumber="5">
+          <span class="hits">3</span>
           
           <code class="ruby">    @order = current_order</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="6">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="3" data-linenumber="6">
+          <span class="hits">3</span>
           
           <code class="ruby">    @tour = @order.tour_orders.new(tour_params)</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="7">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="3" data-linenumber="7">
+          <span class="hits">3</span>
           
           <code class="ruby">    @order.account_id = current_user.id</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="8">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="3" data-linenumber="8">
+          <span class="hits">3</span>
           
           <code class="ruby">    @order.save!</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="9">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="3" data-linenumber="9">
+          <span class="hits">3</span>
           
           <code class="ruby">    session[:order_id] = @order.id</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="10">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="3" data-linenumber="10">
+          <span class="hits">3</span>
           
           <code class="ruby">    flash[:notice] = &quot;Tour added to Your Itinerary&quot;</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="11">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="3" data-linenumber="11">
+          <span class="hits">3</span>
           
           <code class="ruby">    redirect_to tours_path</code>
         </li>
@@ -1803,8 +1813,8 @@
           <code class="ruby">  def tour_params</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="29">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="3" data-linenumber="29">
+          <span class="hits">3</span>
           
           <code class="ruby">    params.require(:tour_order).permit(:quantity,:tour_id)</code>
         </li>
@@ -1864,8 +1874,8 @@
           <code class="ruby">  def index</code>
         </li>
       
-        <li class="covered" data-hits="33" data-linenumber="5">
-          <span class="hits">33</span>
+        <li class="covered" data-hits="38" data-linenumber="5">
+          <span class="hits">38</span>
           
           <code class="ruby">    @tours = Tour.all</code>
         </li>
@@ -1888,14 +1898,14 @@
           <code class="ruby">  def show</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="9">
-          <span class="hits">5</span>
+        <li class="covered" data-hits="6" data-linenumber="9">
+          <span class="hits">6</span>
           
           <code class="ruby">    @tour = Tour.find(params[:id])</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="10">
-          <span class="hits">5</span>
+        <li class="covered" data-hits="6" data-linenumber="10">
+          <span class="hits">6</span>
           
           <code class="ruby">    @tour_order = current_order.tour_orders.new</code>
         </li>
@@ -1918,8 +1928,8 @@
           <code class="ruby">  def new</code>
         </li>
       
-        <li class="covered" data-hits="7" data-linenumber="14">
-          <span class="hits">7</span>
+        <li class="covered" data-hits="8" data-linenumber="14">
+          <span class="hits">8</span>
           
           <code class="ruby">    @tour = Tour.new</code>
         </li>
@@ -1942,26 +1952,26 @@
           <code class="ruby">  def create</code>
         </li>
       
-        <li class="covered" data-hits="7" data-linenumber="18">
-          <span class="hits">7</span>
+        <li class="covered" data-hits="8" data-linenumber="18">
+          <span class="hits">8</span>
           
           <code class="ruby">    @tour = Tour.new(tour_params)</code>
         </li>
       
-        <li class="covered" data-hits="7" data-linenumber="19">
-          <span class="hits">7</span>
+        <li class="covered" data-hits="8" data-linenumber="19">
+          <span class="hits">8</span>
           
           <code class="ruby">    if @tour.save</code>
         </li>
       
-        <li class="covered" data-hits="6" data-linenumber="20">
-          <span class="hits">6</span>
+        <li class="covered" data-hits="7" data-linenumber="20">
+          <span class="hits">7</span>
           
           <code class="ruby">      flash[:notice]= &quot;Tour Created&quot;</code>
         </li>
       
-        <li class="covered" data-hits="6" data-linenumber="21">
-          <span class="hits">6</span>
+        <li class="covered" data-hits="7" data-linenumber="21">
+          <span class="hits">7</span>
           
           <code class="ruby">      redirect_to tours_path</code>
         </li>
@@ -2140,8 +2150,8 @@
           <code class="ruby">  def tour_params</code>
         </li>
       
-        <li class="covered" data-hits="9" data-linenumber="51">
-          <span class="hits">9</span>
+        <li class="covered" data-hits="10" data-linenumber="51">
+          <span class="hits">10</span>
           
           <code class="ruby">    params.require(:tour).permit(:user_name, :photo, :title, :price, :description, :location, :date, :time, :user_id, :account_id)</code>
         </li>
@@ -2166,11 +2176,11 @@
         <div class="source_table" id="cc0342d54252468e844b0ab0a61fc40d764ec9e3">
   <div class="header">
     <h3>app/controllers/users_controller.rb</h3>
-    <h4><span class="red">76.92 %</span> covered</h4>
+    <h4><span class="green">96.55 %</span> covered</h4>
     <div>
-      <b>26</b> relevant lines. 
-      <span class="green"><b>20</b> lines covered</span> and
-      <span class="red"><b>6</b> lines missed.</span>
+      <b>29</b> relevant lines. 
+      <span class="green"><b>28</b> lines covered</span> and
+      <span class="red"><b>1</b> lines missed.</span>
     </div>
   </div>
   
@@ -2333,8 +2343,8 @@
           <code class="ruby">  def show</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="27">
-          
+        <li class="covered" data-hits="1" data-linenumber="27">
+          <span class="hits">1</span>
           
           <code class="ruby">    @user = User.find(params[:id])</code>
         </li>
@@ -2357,79 +2367,97 @@
           <code class="ruby">  def destroy</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="31">
+        <li class="covered" data-hits="1" data-linenumber="31">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">    @tour = Tour.find(params[:id])</code>
+          <code class="ruby">    @user = User.find(params[:id])</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="32">
+        <li class="covered" data-hits="1" data-linenumber="32">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">    @tour.destroy</code>
+          <code class="ruby">    @account = Account.find(current_user.id)</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="33">
+        <li class="covered" data-hits="1" data-linenumber="33">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">    flash[:notice] = &quot;Tour has been removed!&quot;</code>
+          <code class="ruby">    @account.destroy</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="34">
+        <li class="covered" data-hits="1" data-linenumber="34">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">    redirect_to tours_path</code>
+          <code class="ruby">    @user.destroy</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="35">
+        <li class="covered" data-hits="1" data-linenumber="35">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">  end</code>
+          <code class="ruby">    session[:user_id] = nil</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="36">
+        <li class="covered" data-hits="1" data-linenumber="36">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby"></code>
+          <code class="ruby">    flash[:notice] = &quot;Account Removed!&quot;</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="37">
           <span class="hits">1</span>
           
-          <code class="ruby">  private</code>
+          <code class="ruby">    redirect_to tours_path</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="38">
           
           
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="39">
+          
+          
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="39">
+        <li class="covered" data-hits="1" data-linenumber="40">
           <span class="hits">1</span>
           
-          <code class="ruby">  def user_params</code>
-        </li>
-      
-        <li class="covered" data-hits="2" data-linenumber="40">
-          <span class="hits">2</span>
-          
-          <code class="ruby">    params.require(:user).permit(:user_name, :email, :admin, :guide, :password, :password_confirmation, :avatar, :id)</code>
+          <code class="ruby">  private</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="41">
           
           
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="42">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def user_params</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="43">
+          <span class="hits">2</span>
+          
+          <code class="ruby">    params.require(:user).permit(:user_name, :email, :admin, :guide, :password, :password_confirmation, :avatar, :id)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="44">
+          
+          
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="42">
+        <li class="never" data-hits="" data-linenumber="45">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="43">
+        <li class="never" data-hits="" data-linenumber="46">
           
           
           <code class="ruby">end</code>
@@ -2528,8 +2556,8 @@
           <code class="ruby">  def tour_cart</code>
         </li>
       
-        <li class="covered" data-hits="80" data-linenumber="3">
-          <span class="hits">80</span>
+        <li class="covered" data-hits="92" data-linenumber="3">
+          <span class="hits">92</span>
           
           <code class="ruby">    current_order.tour_orders.length</code>
         </li>
@@ -2853,8 +2881,8 @@
           <code class="ruby">  def calculate_total</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="10">
-          <span class="hits">5</span>
+        <li class="covered" data-hits="7" data-linenumber="10">
+          <span class="hits">7</span>
           
           <code class="ruby">    self.tour_orders.collect {|item| item.tour.price * item.quantity }.sum</code>
         </li>
@@ -2889,14 +2917,14 @@
           <code class="ruby">  def update_status</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="16">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="3" data-linenumber="16">
+          <span class="hits">3</span>
           
           <code class="ruby">    if self.status == nil</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="17">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="3" data-linenumber="17">
+          <span class="hits">3</span>
           
           <code class="ruby">        self.status = &quot;In Progress&quot;</code>
         </li>
@@ -2925,8 +2953,8 @@
           <code class="ruby">  def update_total</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="22">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="4" data-linenumber="22">
+          <span class="hits">4</span>
           
           <code class="ruby">    self.total_price = calculate_total</code>
         </li>
@@ -3174,14 +3202,14 @@
           <code class="ruby">  def password_complexity</code>
         </li>
       
-        <li class="covered" data-hits="19" data-linenumber="14">
-          <span class="hits">19</span>
+        <li class="covered" data-hits="20" data-linenumber="14">
+          <span class="hits">20</span>
           
           <code class="ruby">    if password.present?</code>
         </li>
       
-        <li class="covered" data-hits="13" data-linenumber="15">
-          <span class="hits">13</span>
+        <li class="covered" data-hits="14" data-linenumber="15">
+          <span class="hits">14</span>
           
           <code class="ruby">       if !password.match(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{7,15}$/)</code>
         </li>
@@ -3222,14 +3250,14 @@
           <code class="ruby">  def encrypt_password</code>
         </li>
       
-        <li class="covered" data-hits="12" data-linenumber="22">
-          <span class="hits">12</span>
+        <li class="covered" data-hits="13" data-linenumber="22">
+          <span class="hits">13</span>
           
           <code class="ruby">    self.password_salt = BCrypt::Engine.generate_salt</code>
         </li>
       
-        <li class="covered" data-hits="12" data-linenumber="23">
-          <span class="hits">12</span>
+        <li class="covered" data-hits="13" data-linenumber="23">
+          <span class="hits">13</span>
           
           <code class="ruby">    self.password_hash = BCrypt::Engine.hash_secret(password,password_salt)</code>
         </li>
@@ -3252,20 +3280,20 @@
           <code class="ruby">  def self.authenticate(email, password)</code>
         </li>
       
-        <li class="covered" data-hits="10" data-linenumber="27">
-          <span class="hits">10</span>
+        <li class="covered" data-hits="11" data-linenumber="27">
+          <span class="hits">11</span>
           
           <code class="ruby">   user = User.find_by &quot;email = ?&quot;, email</code>
         </li>
       
-        <li class="covered" data-hits="10" data-linenumber="28">
-          <span class="hits">10</span>
+        <li class="covered" data-hits="11" data-linenumber="28">
+          <span class="hits">11</span>
           
           <code class="ruby">   if user &amp;&amp; user.password_hash == BCrypt::Engine.hash_secret(password, user.password_salt)</code>
         </li>
       
-        <li class="covered" data-hits="9" data-linenumber="29">
-          <span class="hits">9</span>
+        <li class="covered" data-hits="10" data-linenumber="29">
+          <span class="hits">10</span>
           
           <code class="ruby">     user</code>
         </li>
@@ -4890,8 +4918,8 @@
           <code class="ruby">    guide(true)</code>
         </li>
       
-        <li class="covered" data-hits="10" data-linenumber="8">
-          <span class="hits">10</span>
+        <li class="covered" data-hits="11" data-linenumber="8">
+          <span class="hits">11</span>
           
           <code class="ruby">    avatar{ fixture_file_upload(Rails.root.join(&#39;spec&#39;, &#39;images&#39;, &#39;ghost.png&#39;), &#39;image/png&#39;) }</code>
         </li>
@@ -6221,6 +6249,211 @@
 </div>
 
       
+        <div class="source_table" id="6ff0700cd75b90d311e36e3877d66b6d1fc96cd8">
+  <div class="header">
+    <h3>spec/features/user_deletion_spec.rb</h3>
+    <h4><span class="green">100.0 %</span> covered</h4>
+    <div>
+      <b>27</b> relevant lines. 
+      <span class="green"><b>27</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="covered" data-hits="1" data-linenumber="1">
+          <span class="hits">1</span>
+          
+          <code class="ruby">require &#39;rails_helper&#39;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="2">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="3">
+          <span class="hits">1</span>
+          
+          <code class="ruby">describe &#39;user sign in&#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="4">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  it &#39;create a new user&#39;, js:true do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="5">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    visit &#39;tours#index&#39;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="6">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    click_on &#39;Sign In&#39;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="7">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    user = FactoryBot.create(:user)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="8">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    FactoryBot.create(:account)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="9">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &#39;email&#39;, :with =&gt; user.email</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="10">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &#39;password&#39;, :with =&gt; user.password</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="11">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    click_button &quot;Sign in&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="12">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    visit new_tour_path</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="13">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &#39;tour_title&#39;, :with =&gt; &quot;Night Hike&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="14">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;tour_description&quot;, :with =&gt; &quot;A hike at night&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="15">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;tour_location&quot;, :with =&gt; &quot;Portland,Or&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="16">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;tour_date&quot;, :with=&gt; &quot;2019/01/01&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="17">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    find(&quot;#tour_time_4i&quot;).find(:option, &quot;12 AM&quot;).select_option</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="18">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    find(&quot;#tour_time_5i&quot;).find(:option, &quot;00&quot;).select_option</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="19">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;tour_price&quot;, :with =&gt; 50</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="20">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    attach_file &#39;tour_photo&#39;, &quot;#{Rails.root}/spec/images/party.jpeg&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="21">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    click_on &quot;Create Tour&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="22">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    visit &quot;tours/#{Tour.first.id}&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="23">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;tour_order_quantity&quot;, :with =&gt; 1</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="24">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    click_on &quot;Add to Your Itinerary&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="25">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    visit &quot;users/#{User.first.id}&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="26">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    accept_confirm do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="27">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      click_on &quot;Delete Account&quot;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="28">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="29">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    expect(page).to have_content &quot;Account Removed&quot;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="30">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="31">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+    </ol>
+  </pre>
+</div>
+
+      
         <div class="source_table" id="8a43e4ea77050b3ac3bb705b37882aeb39db109c">
   <div class="header">
     <h3>spec/features/user_signin_spec.rb</h3>
@@ -7192,14 +7425,14 @@
           <code class="ruby"> config.around(:each) do |example|</code>
         </li>
       
-        <li class="covered" data-hits="34" data-linenumber="45">
-          <span class="hits">34</span>
+        <li class="covered" data-hits="35" data-linenumber="45">
+          <span class="hits">35</span>
           
           <code class="ruby">   DatabaseCleaner.cleaning do</code>
         </li>
       
-        <li class="covered" data-hits="34" data-linenumber="46">
-          <span class="hits">34</span>
+        <li class="covered" data-hits="35" data-linenumber="46">
+          <span class="hits">35</span>
           
           <code class="ruby">     example.run</code>
         </li>
