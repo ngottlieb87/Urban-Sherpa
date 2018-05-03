@@ -10,7 +10,7 @@ describe 'user sign in' do
     click_button "Sign in"
     expect(page).to have_content "You've signed in."
   end
-
+  
   it 'fail user sign in', js:true do
     visit 'tours#index'
     click_on 'Sign In'
