@@ -10,6 +10,7 @@ describe 'create new user sign up' do
     fill_in 'user_password_confirmation', :with => 'Password1'
     fill_in 'User name', :with => 'Howdy123'
     have_select 'guide', selected: 'Attendee'
+    attach_file 'user_avatar', "#{Rails.root}/spec/images/ghost.png"
     click_button "Sign Up"
     expect(page).to have_content "Thanks for signing up!"
   end
