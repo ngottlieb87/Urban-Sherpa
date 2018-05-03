@@ -12,7 +12,7 @@ class ApplicationController < ActionController::Base
   end
 
   def is_admin?
-    current_user.admin = true
+    current_user && current_user.admin
   end
 
   def is_guide?
