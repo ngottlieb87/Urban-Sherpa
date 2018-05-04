@@ -33,19 +33,19 @@ class ApplicationController < ActionController::Base
     end
   end
 
-  def authorize_admin
-    if !current_user.admin
-      flash[:alert] = 'Admin Only!'
-      redirect_to tours_path
-    end
-  end
+  # def authorize_admin
+  #   if !current_user.admin
+  #     flash[:alert] = 'Admin Only!'
+  #     redirect_to tours_path
+  #   end
+  # end
 
-  def authorize_guide
-    if !is_guide?
-      flash[:alert] = 'You must be a guide to create a tour!'
-      redirect_to tours_path
-    end
-  end
+  # def authorize_guide
+  #   if !is_guide?
+  #     flash[:alert] = 'You must be a guide to create a tour!'
+  #     redirect_to tours_path
+  #   end
+  # end
 
   def current_order
     if session[:order_id] && Order.find(session[:order_id]).status != "paid"
