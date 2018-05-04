@@ -340,8 +340,8 @@
         1,
         null,
         1,
-        347,
-        327,
+        345,
+        325,
         null,
         null,
         null,
@@ -368,7 +368,7 @@
         null,
         null,
         1,
-        21,
+        0,
         0,
         0,
         null,
@@ -526,7 +526,7 @@
       "/Users/noahgottlieb/Desktop/code/Urban-Sherpa/app/controllers/tours_controller.rb": [
         1,
         1,
-        1,
+        null,
         1,
         38,
         null,
@@ -538,6 +538,10 @@
         null,
         1,
         8,
+        8,
+        0,
+        0,
+        null,
         null,
         null,
         1,
@@ -552,6 +556,10 @@
         null,
         1,
         2,
+        2,
+        0,
+        0,
+        null,
         null,
         null,
         1,
@@ -560,6 +568,7 @@
         1,
         1,
         null,
+        1,
         1,
         null,
         null,
@@ -606,6 +615,10 @@
         null,
         1,
         1,
+        1,
+        0,
+        0,
+        null,
         null,
         null,
         1,
@@ -1101,6 +1114,6 @@
         null
       ]
     },
-    "timestamp": 1525384597
+    "timestamp": 1525409278
   }
 }
