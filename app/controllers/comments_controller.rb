@@ -12,7 +12,7 @@ class CommentsController < ApplicationController
       flash[:notice] = "Comment Added!"
       redirect_to tour_path(@tour.id)
     else
-      flash[:notice] = "Comment body can't be blank"
+      flash[:notice] = "Comment field can't be blank"
       redirect_to tour_path(@tour.id)
     end
   end
