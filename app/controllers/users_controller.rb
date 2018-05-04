@@ -25,6 +25,10 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
+    unless @user.id == current_user.id
+      flash[:alert] = "You do not have access to this account"
+      redirect_to tours_path
+    end
   end
 
   def destroy
