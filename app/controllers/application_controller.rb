@@ -34,7 +34,7 @@ class ApplicationController < ActionController::Base
   end
 
   def authorize_guide
-    if !current_user.guide
+    if !is_guide?
       flash[:alert] = 'You must be a guide to create a tour!'
       redirect_to tours_path
     end

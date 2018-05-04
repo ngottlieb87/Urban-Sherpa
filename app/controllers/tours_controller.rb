@@ -1,6 +1,6 @@
 class ToursController < ApplicationController
   before_action :authorize, only: [:show]
-  before_action :authorize_guide || :authorize_admin, only: [:new,:edit,:create,:update,:destroy]
+
   def index
     @tours = Tour.all
   end
@@ -12,6 +12,10 @@ class ToursController < ApplicationController
 
   def new
     @tour = Tour.new
+    unless current_user && current_user.guide || is_admin?
+      flash[:notice] = "Must Be A Guide To Create Tours"
+      redirect_to tours_path
+    end
   end
 
   def create
@@ -26,6 +30,10 @@ class ToursController < ApplicationController
 
   def edit
     @tour = Tour.find(params[:id])
+    unless @tour.user_id === current_user.id || is_admin?
+      flash[:notice] = "Not your tour to update"
+      redirect_to tours_path
+    end
   end
 
   def update
@@ -34,6 +42,7 @@ class ToursController < ApplicationController
       flash[:notice] = "Tour Updated"
       redirect_to tours_path
     else
+      flash[:notice] = "oops"
       render :edit
     end
   end
