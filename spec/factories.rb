@@ -16,6 +16,17 @@ FactoryBot.define do
     avatar{ fixture_file_upload(Rails.root.join('spec', 'images', 'ghost.png'), 'image/png') }
   end
 
+  factory(:tour) do
+    title("Day Hike")
+    description("Hike during the day")
+    location("Portland, Or")
+    time("11:00")
+    date("2019-01-01")
+    price("40.00")
+    user_id(1)
+    photo {fixture_file_upload(Rails.root.join('spec', 'images', 'city.jpeg'), 'image/jpeg') }
+  end
+
   factory(:account) do
     user_id 1
   end
