@@ -17,4 +17,9 @@ describe 'add tour to cart' do
     click_on "Checkout"
     expect(page).to have_content "Your Total:"
   end
+
+  it "fails cart without signin" do
+    visit "/cart"
+    expect(page).to have_content "Please sign in to access cart"
+  end
 end
