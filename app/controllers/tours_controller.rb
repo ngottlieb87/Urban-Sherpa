@@ -11,6 +11,8 @@ class ToursController < ApplicationController
       @tours = @tours.most_recent
     elsif params[:sort] == "oldest"
       @tours = @tours.oldest
+    elsif params[:sort] == "most_reviewed"
+      @tours = @tours.most_reviewed
     end
   end
 
