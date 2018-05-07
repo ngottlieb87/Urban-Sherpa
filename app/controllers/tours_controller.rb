@@ -1,5 +1,4 @@
 class ToursController < ApplicationController
-  # before_action :authorize, only: [:show]
 
   def index
     @tours = Tour.all

@@ -64,6 +64,7 @@ p{
   width: 600px;
   margin-top: 40px;
   margin: 80px auto;
+  position: fixed;
 }
 
 body{
@@ -95,7 +96,7 @@ button{
   z-index: 9;
 }
 
-.navbar-nav  li{
+.navbar-nav li{
   margin-left:20px;
   margin-right:20px;
   display: inline;
@@ -150,4 +151,10 @@ button{
   width: 600px;
   margin-top: 40px;
   margin: 80px auto;
+}
+
+#tour_filter{
+  float: right;
+
+  margin-bottom: 40px
 }
