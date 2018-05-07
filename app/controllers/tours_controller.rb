@@ -3,6 +3,15 @@ class ToursController < ApplicationController
 
   def index
     @tours = Tour.all
+    if params[:sort] == "a_z"
+      @tours = @tours.a_z
+    elsif params[:sort] == "z_a"
+      @tours = @tours.z_a
+    elsif params[:sort] == "most_recent"
+      @tours = @tours.most_recent
+    elsif params[:sort] == "oldest"
+      @tours = @tours.oldest
+    end
   end
 
   def show
