@@ -1,3 +1,17 @@
+<div class="dropdown">
+  <button class="btn btn-dark dropdown-toggle" id="tour_filter" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Filter Tours By:
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <a class="dropdown-item" href="/" selected >All</a>
+    <a class="dropdown-item" href="?sort=a_z">Title: A-Z</a>
+    <a class="dropdown-item" href="?sort=z_a">Title: Z-A</a>
+    <a class="dropdown-item" href="?sort=most_recent">Most Recent</a>
+    <a class="dropdown-item" href="?sort=oldest">Oldest</a>
+    <a class="dropdown-item" href="?sort=most_reviewed">Most Reviewed</a>
+  </div>
+</div>
+
 <div class ="row">
   <% @tours.each do |tour| %>
     <div class = "col-md-4">

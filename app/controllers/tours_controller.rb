@@ -1,8 +1,18 @@
 class ToursController < ApplicationController
-  # before_action :authorize, only: [:show]
 
   def index
     @tours = Tour.all
+    if params[:sort] == "a_z"
+      @tours = @tours.a_z
+    elsif params[:sort] == "z_a"
+      @tours = @tours.z_a
+    elsif params[:sort] == "most_recent"
+      @tours = @tours.most_recent
+    elsif params[:sort] == "oldest"
+      @tours = @tours.oldest
+    elsif params[:sort] == "most_reviewed"
+      @tours = @tours.most_reviewed
+    end
   end
 
   def show
