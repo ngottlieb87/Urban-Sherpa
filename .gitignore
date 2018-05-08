@@ -19,3 +19,4 @@
 .byebug_history
 .env
 /public/system/users/avatars
+/app/helpers/tour_map_helper.rb
