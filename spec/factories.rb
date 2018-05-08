@@ -27,7 +27,32 @@ FactoryBot.define do
     photo {fixture_file_upload(Rails.root.join('spec', 'images', 'city.jpeg'), 'image/jpeg') }
   end
 
+  factory(:tour2, class: Tour) do
+    title("Night Hike")
+    description("Hike during the night")
+    location("San Francisco, Ca")
+    time("22:00")
+    date("2019-05-13")
+    price("60.00")
+    user_id(1)
+    photo {fixture_file_upload(Rails.root.join('spec', 'images', 'city.jpeg'), 'image/jpeg') }
+  end
+
+  factory(:tour3, class: Tour) do
+    title("Distillery Tour")
+    description("Distillery Tour with tasting")
+    location("Seattle, Wa")
+    time("11:00")
+    date("2019-01-01")
+    price("12.00")
+    user_id(1)
+    photo {fixture_file_upload(Rails.root.join('spec', 'images', 'city.jpeg'), 'image/jpeg') }
+  end
+
   factory(:account) do
     user_id 1
+  end
+  factory(:account2, class: Account) do
+    user_id 2
   end
 end
