@@ -96,6 +96,7 @@ GEM
       railties (>= 3.2, < 6.0)
     geckodriver-helper (0.0.5)
       archive-zip (~> 0.7)
+    geocoder (1.4.7)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
     haml (5.0.4)
@@ -308,6 +309,7 @@ DEPENDENCIES
   factory_bot_rails (~> 4.0)
   faker
   geckodriver-helper (~> 0.0.5)
+  geocoder (~> 1.4, >= 1.4.7)
   jbuilder (~> 2.5)
   jquery-rails
   launchy

@@ -7,6 +7,8 @@ class Tour < ApplicationRecord
   validates :title, presence: true
   validates :description, presence: true
   validates :location, presence: true
+  geocoded_by :location
+  after_validation :geocode, if: ->(obj){ obj.location.present? and obj.location_changed? }
   has_attached_file :photo, styles: { medium: "300x300>"}, default_url: "/images/:style/missing.png"
   validates_attachment_content_type :photo, content_type: /\Aimage\/.*\z/
 

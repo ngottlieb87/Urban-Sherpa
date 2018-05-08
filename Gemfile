@@ -34,6 +34,7 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'paperclip', '~> 6.0'
 gem 'stripe'
 gem 'rails-html-sanitizer', '~> 1.0', '>= 1.0.4'
+gem 'geocoder', '~> 1.4', '>= 1.4.7'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
