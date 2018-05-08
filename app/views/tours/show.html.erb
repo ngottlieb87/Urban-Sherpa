@@ -31,6 +31,12 @@
       </div>
     </div>
   </div>
+  <div class="col-md-4">
+    <div class="card">
+      <%= image_tag "http://maps.googleapis.com/maps/api/staticmap?center=#{@tour.latitude},#{@tour.longitude}&markers=#{@tour.latitude},#{@tour.longitude}&zoom=18&size=640x400&key=AIzaSyBVLmVoENDSEPwIH5OWS3cYo3zg8BuVFvg",
+                class: 'img-fluid img-rounded', alt: "#{@tour.title} on the map"%>
+    </div>
+  </div>
   <div class= "col-md-4">
     <% if @tour.comments.any? %>
       <div class= "card">
