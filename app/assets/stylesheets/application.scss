@@ -31,9 +31,12 @@
  a:active {
    color: #607d8b;
  }
- .signInUp{
+ .signUp{
    margin-top: 20px;
    text-align: center;
+ }
+ .signIn{
+   margin-top:50px;
  }
 h1{
   font-family: 'Open Sans', sans-serif;
@@ -53,8 +56,7 @@ p{
   border-radius: 40px;
 }
 
-
-.card{
+.tour_card{
   margin-top: 30px;
   margin-bottom: 20px;
   align-self: auto;
@@ -68,7 +70,7 @@ p{
   position: fixed;
 }
 
-body{
+#main_body{
   background-image: url("http://www.publicdomainpictures.net/pictures/170000/velka/holiday-1463128399PLs.jpg");
   background-size: 100%;
   background-attachment: fixed;
@@ -83,13 +85,9 @@ body{
   text-align: center;
 }
 
-button{
-  margin-left: 5px;
-}
-
 .pay{
   text-align: center;
-  margin: -20px;
+  margin-top: 80px;
 }
 
 .navbar{
@@ -100,11 +98,7 @@ button{
 .navbar-nav li{
   margin-left:20px;
   margin-right:20px;
-  display: inline;
-}
-
-.dropdown-menu > a{
-  margin-left: 10px;
+  margin-top:-20px;
 }
 
 .tour_title{
@@ -123,17 +117,18 @@ button{
   margin-left: 10px;
 }
 
-.alertCard {
+.alert_notice{
   max-width: 33%;
   margin-top: 50px;
   margin-left: 500px;
-  color: red;
 }
-.noticeCard {
-  max-width: 33%;
-  margin-top: 50px;
-  margin-left: 500px;
+
+#notice{
   color: green;
+}
+
+#alert{
+color: red;
 }
 
 .displayComment{
@@ -156,6 +151,12 @@ button{
 
 #tour_filter{
   float: right;
-
-  margin-bottom: 40px
+  margin-bottom: 20px;
+  margin-top:-10px;
+}
+.cart_display{
+  margin-top: 80px;
+}
+.remove_item{
+  text-decoration: underline;
 }

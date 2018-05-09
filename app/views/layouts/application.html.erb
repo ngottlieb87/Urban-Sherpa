@@ -55,13 +55,12 @@
   </div>
   </header>
 
-  <body>
+
+  <body id="main_body">
     <div class = "container">
-      <div class="alertCard">
-        <%= flash[:alert] %>
-      </div>
-      <div class="noticeCard">
-        <%= flash[:notice] %>
+      <div class="alert_notice">
+          <span id="alert"><%= flash[:alert] %></span>
+          <span id="notice"><%= flash[:notice] %></span>
       </div>
       <%= yield %>
     </div>
