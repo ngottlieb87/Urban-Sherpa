@@ -34,21 +34,30 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  def guide_edit
+    current_user.id === @tour.user_id
+  end
   # def authorize_admin
   #   if !current_user.admin
   #     flash[:alert] = 'Admin Only!'
   #     redirect_to tours_path
   #   end
   # end
-  # 
-  # def authorize_guide
-  #   @tour = Tour.find(params[:id])
-  #   if i == @tour.user.id
-  #     binding.pry
-  #     flash[:alert] = 'You must be a guide to create a tour!'
-  #     redirect_to tours_path
-  #   end
-  # end
+  #
+  def authorize_guide_edit
+    @tour = Tour.find(params[:id])
+    if !current_user || !guide_edit
+      flash[:alert] = 'You do not have access to change this tour!'
+      redirect_to tours_path
+    end
+  end
+
+  def authorize_is_guide?
+    if !is_guide?
+      flash[:alert] = 'Must be a guide to create tour!'
+      redirect_to tours_path
+    end
+  end
 
   def current_order
     if session[:order_id] && Order.find(session[:order_id]).status != "paid"
