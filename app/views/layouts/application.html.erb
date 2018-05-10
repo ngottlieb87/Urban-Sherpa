@@ -24,13 +24,13 @@
         <li class="nav-item dropdown" id="user_nav_drop">
           <a class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="navbarDropdown"><%= current_user.user_name%></a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown" id="dropmenu_items">
-              <a><%= link_to "Profile", "/users/#{current_user.id}", class:"dropdown-item"%></a>
-              <a class="dropdown-item"><%= link_to "Itinerary | #{tour_cart}", cart_path, class:"dropdown-item"%></a>
+              <%= link_to "Profile", "/users/#{current_user.id}", class:"dropdown-item"%>
+              <%= link_to "Itinerary | #{tour_cart}", cart_path, class:"dropdown-item"%>
               <% if is_guide? %>
-              <a class="dropdown-item"><%= link_to "Create A Tour", new_tour_path, class: "dropdown-item"%></a>
+              <%= link_to "Create A Tour", new_tour_path, class: "dropdown-item"%>
               <% end %>
               <div class="dropdown-divider"></div>
-                <a class="dropdown-item"><%= link_to "Sign Out", "/signout", class:"dropdown-item"%></a>
+                <%= link_to "Sign Out", "/signout", class:"dropdown-item"%>
             </div>
           </li>
         </ul>

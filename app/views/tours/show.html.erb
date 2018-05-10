@@ -33,7 +33,7 @@
   </div>
   <div class="col-md-4">
     <div class="card" id="map">
-      <%= image_tag "http://maps.googleapis.com/maps/api/staticmap?center=#{@tour.latitude},#{@tour.longitude}&markers=#{@tour.latitude},#{@tour.longitude}&zoom=20&size=720x480&key=#{api_key}",
+      <%= image_tag "http://maps.googleapis.com/maps/api/staticmap?center=#{@tour.latitude},#{@tour.longitude}&markers=#{@tour.latitude},#{@tour.longitude}&zoom=20&size=720x480&key="+ ENV['MAP_KEY'],
                 class: 'img-fluid img-rounded', alt: "#{@tour.title} on the map"%>
     </div>
   </div>

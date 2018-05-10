@@ -53,8 +53,8 @@ group :development, :test do
   gem 'capybara'
   gem "factory_bot_rails", "~> 4.0"
   gem 'simplecov', require: false
-  gem 'dotenv-rails'
   gem 'database_cleaner', '~> 1.7'
+  gem 'dotenv-rails'
 end
 
 group :development do

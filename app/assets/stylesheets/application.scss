@@ -145,8 +145,10 @@ color: red;
   z-index:8;
 }
 
-#dropmenu_items > a:hover{
-  color: #263232;
+
+#dropmenu_items {
+  margin-left: 55px;
+  margin-top: -13px;
 }
 #user_nav_drop{
   margin-top: -15px;
