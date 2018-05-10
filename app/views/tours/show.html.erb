@@ -1,5 +1,5 @@
 <div class = "row">
-  <div class = "col-md-4">
+  <div class = "col-md-4 tour_details">
     <div class = "card">
       <div class = "card-body">
         <h1 class="tour_title"><%= @tour.title %></h1>
@@ -31,13 +31,13 @@
       </div>
     </div>
   </div>
-  <div class="col-md-4">
-    <div class="card" id="map">
-      <%= image_tag "http://maps.googleapis.com/maps/api/staticmap?center=#{@tour.latitude},#{@tour.longitude}&markers=#{@tour.latitude},#{@tour.longitude}&zoom=20&size=720x480&key=#{api_key}",
+  <div class="col-md-4" id="map">
+    <div class="card">
+      <%= image_tag "http://maps.googleapis.com/maps/api/staticmap?center=#{@tour.latitude},#{@tour.longitude}&markers=#{@tour.latitude},#{@tour.longitude}&zoom=20&size=720x480&key="+ ENV['MAP_KEY'],
                 class: 'img-fluid img-rounded', alt: "#{@tour.title} on the map"%>
     </div>
   </div>
-  <div class= "col-md-4">
+  <div class= "col-md-4 comment">
     <% if @tour.comments.any? %>
       <div class= "card">
           <h3>Comments for <%= @tour.title %></h3>
@@ -54,7 +54,7 @@
         <span class= "displayComment"></span>
 
       <% else %>
-      <div class = "card comment">
+      <div class = "card">
         <p class= "addComment">There are currently no comments for this tour.</p>
            <% if current_user %>
            <p>Been on this tour? <%= link_to "Let others know what you think about it!", new_tour_comment_path(@tour), remote: true%></p>

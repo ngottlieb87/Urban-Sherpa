@@ -21,7 +21,7 @@
  }
 
  a:visited {
-   color: #263238 ;
+   color: #263238;
  }
 
  a:hover {
@@ -31,9 +31,12 @@
  a:active {
    color: #607d8b;
  }
- .signInUp{
+ .signUp{
    margin-top: 20px;
    text-align: center;
+ }
+ .signIn{
+   margin-top:50px;
  }
 h1{
   font-family: 'Open Sans', sans-serif;
@@ -53,8 +56,7 @@ p{
   border-radius: 40px;
 }
 
-
-.card{
+.tour_card{
   margin-top: 30px;
   margin-bottom: 20px;
   align-self: auto;
@@ -68,13 +70,14 @@ p{
   position: fixed;
 }
 
-body{
+#main_body{
   background-image: url("http://www.publicdomainpictures.net/pictures/170000/velka/holiday-1463128399PLs.jpg");
   background-size: 100%;
   background-attachment: fixed;
 }
 
 .comment{
+  margin-top: 25px;
   padding: 20px;
   border-radius: 10px;
 }
@@ -83,28 +86,22 @@ body{
   text-align: center;
 }
 
-button{
-  margin-left: 5px;
-}
-
 .pay{
   text-align: center;
-  margin: -20px;
+  margin-top: 80px;
+  padding:10px;
 }
 
 .navbar{
   position:fixed;
   z-index: 9;
+  width:100%;
 }
 
-.navbar-nav li{
+.navbar-nav > li{
   margin-left:20px;
   margin-right:20px;
-  display: inline;
-}
-
-.dropdown-menu > a{
-  margin-left: 10px;
+  margin-top:-20px;
 }
 
 .tour_title{
@@ -123,17 +120,18 @@ button{
   margin-left: 10px;
 }
 
-.alertCard {
+.alert_notice{
   max-width: 33%;
   margin-top: 50px;
   margin-left: 500px;
-  color: red;
 }
-.noticeCard {
-  max-width: 33%;
-  margin-top: 50px;
-  margin-left: 500px;
+
+#notice{
   color: green;
+}
+
+#alert{
+color: red;
 }
 
 .displayComment{
@@ -147,15 +145,36 @@ button{
   position:fixed;
   z-index:8;
 }
-
-#guide_tour{
-  width: 600px;
+#map{
   margin-top: 40px;
-  margin: 80px auto;
+}
+.tour_details{
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+#dropmenu_items {
+  margin-left: 55px;
+  margin-top: -13px;
+}
+#user_nav_drop{
+  margin-top: -15px;
 }
 
 #tour_filter{
   float: right;
+  margin-top:13px;
+}
 
-  margin-bottom: 40px
+.cart_display{
+  margin-top: 80px;
+}
+
+.remove_item{
+  text-decoration: underline;
+}
+
+.guide_tour{
+  width: 600px;
+  margin-top: 40px;
+  margin: 80px auto;
 }

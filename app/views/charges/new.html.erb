@@ -7,6 +7,9 @@
         </div>
       <% end %>
       <label class="amount">
+        <% @tour_orders.each do |item| %>
+        <p><%=item.tour.title %></p>
+        <% end %>
         <span><h3>Your Total: </h3> <h5><%= number_to_currency @amount %></h5></span>
       </label>
     </article>
@@ -17,4 +20,6 @@
             data-amount= "<%= @amount * 100 %>"
             data-locale="auto"></script>
   <% end %>
+  <br>
+  <p> <%= link_to "Something Not Look Right? Back To Cart", cart_path%>
 </div>

@@ -15,8 +15,6 @@
 
 /node_modules
 /yarn-error.log
-
-.byebug_history
 .env
+.byebug_history
 /public/system/users/avatars
-/app/helpers/tour_map_helper.rb
