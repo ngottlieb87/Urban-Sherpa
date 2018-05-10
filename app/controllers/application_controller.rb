@@ -4,6 +4,7 @@ class ApplicationController < ActionController::Base
   helper_method :is_admin?
   helper_method :is_guide?
   helper_method :current_order
+  helper_method :authorize_guide
 
   def current_user
     if session[:user_id]
@@ -39,9 +40,11 @@ class ApplicationController < ActionController::Base
   #     redirect_to tours_path
   #   end
   # end
-
+  # 
   # def authorize_guide
-  #   if !is_guide?
+  #   @tour = Tour.find(params[:id])
+  #   if i == @tour.user.id
+  #     binding.pry
   #     flash[:alert] = 'You must be a guide to create a tour!'
   #     redirect_to tours_path
   #   end

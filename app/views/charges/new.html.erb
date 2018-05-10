@@ -11,7 +11,6 @@
         <p><%=item.tour.title %></p>
         <% end %>
         <span><h3>Your Total: </h3> <h5><%= number_to_currency @amount %></h5></span>
-        <p> <%= link_to "Something Not Look Right? Back To Cart", cart_path%>
       </label>
     </article>
 
@@ -21,4 +20,6 @@
             data-amount= "<%= @amount * 100 %>"
             data-locale="auto"></script>
   <% end %>
+  <br>
+  <p> <%= link_to "Something Not Look Right? Back To Cart", cart_path%>
 </div>

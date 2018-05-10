@@ -1,7 +1,6 @@
 class ChargesController < ApplicationController
   def new
     @amount = current_user.account.orders.last.total_price
-    binding.pry
     @tour_orders = current_order.tour_orders
   end
 

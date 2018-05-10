@@ -22,7 +22,7 @@ class ToursController < ApplicationController
 
   def new
     @tour = Tour.new
-    unless current_user && current_user.guide || is_admin?
+    unless is_guide? || is_admin?
       flash[:notice] = "Must Be A Guide To Create Tours"
       redirect_to tours_path
     end
