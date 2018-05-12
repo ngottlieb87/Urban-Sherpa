@@ -5,6 +5,7 @@ class ApplicationController < ActionController::Base
   helper_method :is_guide?
   helper_method :current_order
   helper_method :authorize_guide
+  helper_method :authorize_guide_edit
 
   def current_user
     if session[:user_id]
@@ -12,12 +13,16 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  def user_comment
+    current_user.id === @tour.comment.user_id || is_admin?
+  end
+
   def is_admin?
     current_user && current_user.admin
   end
 
   def is_guide?
-    current_user && current_user.guide
+    current_user && current_user.guide || is_admin?
   end
 
   def authorize
@@ -35,18 +40,12 @@ class ApplicationController < ActionController::Base
   end
 
   def guide_edit
-    current_user.id === @tour.user_id
-  end
-  # def authorize_admin
-  #   if !current_user.admin
-  #     flash[:alert] = 'Admin Only!'
-  #     redirect_to tours_path
-  #   end
-  # end
-  #
-  def authorize_guide_edit
     @tour = Tour.find(params[:id])
-    if !current_user || !guide_edit
+    current_user.id === @tour.user_id || is_admin?
+  end
+
+  def authorize_guide_edit
+    if !guide_edit
       flash[:alert] = 'You do not have access to change this tour!'
       redirect_to tours_path
     end

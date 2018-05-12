@@ -1,5 +1,7 @@
 class User < ApplicationRecord
   has_one :account
+  has_many :comments
+  has_many :tours
   validates :user_name, presence: true
   validates :password, presence: true
   validates :email, presence: true, uniqueness: true

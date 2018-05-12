@@ -1,7 +1,6 @@
 class ToursController < ApplicationController
-before_action :authorize_guide_edit, only: [:edit,:update,:destroy]
-
-before_action :authorize_is_guide?, only: [:new,:create]
+before_action :authorize_guide_edit, only: [:edit, :update, :destroy]
+before_action :is_guide?, only: [:new,:create]
 
   def index
     @tours = Tour.all
@@ -24,9 +23,7 @@ before_action :authorize_is_guide?, only: [:new,:create]
   end
 
   def new
-  @tour = Tour.new
-    flash[:notice] = "Must Be A Guide To Create Tours"
-    redirect_to tours_path
+    @tour = Tour.new
   end
 
   def create
@@ -47,7 +44,7 @@ before_action :authorize_is_guide?, only: [:new,:create]
     @tour = Tour.find(params[:id])
     if @tour.update(tour_params)
       flash[:notice] = "Tour Updated"
-      redirect_to tours_path
+      redirect_to "/tours/#{@tour.id}"
     else
       flash[:notice] = "Something went wrong! Check Fields!"
       render :edit

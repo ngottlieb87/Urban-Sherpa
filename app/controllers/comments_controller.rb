@@ -1,5 +1,5 @@
 class CommentsController < ApplicationController
-
+before_action :authorize, only: [:new, :create, :edit, :update, :destroy]
   def new
     @tour = Tour.find(params[:tour_id])
     @comment = @tour.comments.new
@@ -15,6 +15,31 @@ class CommentsController < ApplicationController
       flash[:notice] = "Comment field can't be blank"
       redirect_to tour_path(@tour.id)
     end
+  end
+
+  def edit
+    @tour = Tour.find(params[:id])
+    @comment = @tour.comments.find(params[:tour_id])
+  end
+
+  def update
+    @tour = Tour.find(params[:tour_id])
+    @comment = @tour.comments.find(params[:id])
+    if @comment.update(comment_params)
+      flash[:notice] = "Comment Updated"
+      redirect_to "/tours/#{@tour.id}"
+    else
+      flash[:alert] = "Failed To Update Comment"
+      redirect_to "/tours/#{@tour.id}"
+    end
+  end
+
+  def destroy
+    @tour = Tour.find(params[:id])
+    @comment = @tour.comments.find(params[:tour_id])
+    @comment.destroy
+    flash[:notice] = "Comment Deleted!"
+    redirect_to "/tours/#{@tour.id}"
   end
 
   private
