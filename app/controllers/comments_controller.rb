@@ -1,5 +1,5 @@
 class CommentsController < ApplicationController
-
+before_action :authorize, only: [:new, :create, :edit, :update, :destroy]
   def new
     @tour = Tour.find(params[:tour_id])
     @comment = @tour.comments.new
@@ -18,19 +18,19 @@ class CommentsController < ApplicationController
   end
 
   def edit
-    @tour = Tour.find(params[:tour_id])
-    @comment = @tour.comment.find(params[:id])
+    @tour = Tour.find(params[:id])
+    @comment = @tour.comments.find(params[:tour_id])
   end
 
   def update
-    @tour = Tour.find(params[:id])
-    @comment = @tour.comment.find(params[:id])
+    @tour = Tour.find(params[:tour_id])
+    @comment = @tour.comments.find(params[:id])
     if @comment.update(comment_params)
       flash[:notice] = "Comment Updated"
-      redirect_to tours_path(@tour.id)
+      redirect_to "/tours/#{@tour.id}"
     else
       flash[:alert] = "Failed To Update Comment"
-      redirect_to tours_path(@tour.id)
+      redirect_to "/tours/#{@tour.id}"
     end
   end
 
