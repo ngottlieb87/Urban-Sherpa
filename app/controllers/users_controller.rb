@@ -31,7 +31,10 @@ class UsersController < ApplicationController
 
   def destroy
     @user = User.find(params[:id])
+    @comments = @user.comments.all
     @account = Account.find(current_user.id)
+    @tours = @user.tours.all
+    @tours.destroy
     @account.destroy
     @user.destroy
     session[:user_id] = nil

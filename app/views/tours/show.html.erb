@@ -47,17 +47,17 @@
         <div class= "card-body">
         <% @tour.comments.each do |comment| %>
         <%= comment.body %>
-        <% if current_user.id === comment.user_id %>
+        <% if current_user.id === comment.user_id || is_admin? %>
         <p><%= link_to "Edit", edit_tour_comment_path(comment) %> |
         <%= link_to "Delete", tour_comment_path(comment),
-        :data=>{:confirm => "Are You Sure?", :method => "delete"}%>
+        :data=>{:confirm => "Delete Comment?", :method => "delete"}%>
         </p>
         <% end %>
         <br>
         Comment By: <em><%= comment.user.user_name %></em> <%=image_tag comment.user.avatar.url(:small),class:"avatar"%>
         <hr>
         <% end %>
-        <span class= "displayComment"></span>
+        <span class= "displayComment commentEdit"></span>
 
       <% else %>
       <div class = "card">
