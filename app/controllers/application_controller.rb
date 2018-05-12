@@ -12,6 +12,10 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  def user_comment
+    current_user.id === @tour.comment.user_id
+  end
+
   def is_admin?
     current_user && current_user.admin
   end

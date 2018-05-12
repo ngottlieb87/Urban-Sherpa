@@ -5,7 +5,7 @@
         <h1 class="tour_title"><%= @tour.title %></h1>
         <h4 class="price"><%= number_to_currency @tour.price%></h4>
         <%= image_tag @tour.photo.url(:medium), class: "tour_img"%>
-        <% if is_guide? && current_user.id == @tour.user.id || is_admin? %>
+        <% if is_guide? && current_user.id == @tour.user_id || is_admin? %>
         <br>
           <p><%= link_to "Edit", edit_tour_path(@tour) %> |
           <%= link_to "Delete", tour_path(@tour),
@@ -47,6 +47,12 @@
         <div class= "card-body">
         <% @tour.comments.each do |comment| %>
         <%= comment.body %>
+        <% if current_user.id === comment.user_id %>
+        <p><%= link_to "Edit", edit_tour_comment_path(comment) %> |
+        <%= link_to "Delete", tour_comment_path(comment),
+        :data=>{:confirm => "Are You Sure?", :method => "delete"}%>
+        </p>
+        <% end %>
         <br>
         Comment By: <em><%= comment.user.user_name %></em> <%=image_tag comment.user.avatar.url(:small),class:"avatar"%>
         <hr>

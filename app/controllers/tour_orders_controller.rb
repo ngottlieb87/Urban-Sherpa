@@ -1,5 +1,5 @@
 class TourOrdersController < ApplicationController
-  before_action :authorize, only: [:create]
+  before_action :authorize, only: [:create, :destroy]
   def create
     @tour_orders = current_order.tour_orders
     @order = current_order
