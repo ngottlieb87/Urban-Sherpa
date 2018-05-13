@@ -1,6 +1,6 @@
 class ToursController < ApplicationController
 before_action :authorize_guide_edit, only: [:edit, :update, :destroy]
-before_action :is_guide?, only: [:new,:create]
+before_action :authorize_is_guide?, only: [:new,:create]
 
   def index
     @tours = Tour.all

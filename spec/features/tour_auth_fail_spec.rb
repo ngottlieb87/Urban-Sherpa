@@ -9,7 +9,7 @@ describe 'fail authorizations for tour' do
     fill_in 'password', :with => user.password
     click_button "Sign in"
     visit new_tour_path
-    expect(page).to have_content("Must Be A Guide To Create Tours")
+    expect(page).to have_content 'Must be a guide to create tours!'
   end
 
   it 'fail tour authorization edit',js:true do
@@ -28,6 +28,6 @@ describe 'fail authorizations for tour' do
     fill_in 'password', :with => user.password
     click_button "Sign in"
     visit "tours/#{Tour.first.id}/edit"
-    expect(page).to have_content "Not your tour to update"
+    expect(page).to have_content 'You do not have access to change this tour!'
   end
 end

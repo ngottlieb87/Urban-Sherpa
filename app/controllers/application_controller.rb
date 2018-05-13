@@ -14,7 +14,13 @@ class ApplicationController < ActionController::Base
   end
 
   def user_comment
-    current_user.id === @tour.comment.user_id || is_admin?
+    if !current_user
+      flash[:alert]="Please Sign In"
+      redirect_to tours_path
+    else
+    @comment = Comment.find(params[:tour_id])
+    current_user.id === @comment.user_id || is_admin?
+    end
   end
 
   def is_admin?
@@ -29,6 +35,14 @@ class ApplicationController < ActionController::Base
     if !current_user
       flash[:alert] = 'Please sign in/Create account to access'
       redirect_to tours_path
+    end
+  end
+
+  def authorize_comment_edit
+    @tour = Tour.find(params[:id])
+    if !user_comment
+      flash[:alert]= "Not your comment to edit/delete"
+      redirect_to "/tours/#{@tour.id}"
     end
   end
 
@@ -53,7 +67,7 @@ class ApplicationController < ActionController::Base
 
   def authorize_is_guide?
     if !is_guide?
-      flash[:alert] = 'Must be a guide to create tour!'
+      flash[:alert] = 'Must be a guide to create tours!'
       redirect_to tours_path
     end
   end

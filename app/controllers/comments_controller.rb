@@ -1,5 +1,7 @@
 class CommentsController < ApplicationController
-before_action :authorize, only: [:new, :create, :edit, :update, :destroy]
+before_action :authorize, only: [:new, :create, :show]
+before_action :authorize_comment_edit, only: [ :edit, :update, :destroy]
+
   def new
     @tour = Tour.find(params[:tour_id])
     @comment = @tour.comments.new
