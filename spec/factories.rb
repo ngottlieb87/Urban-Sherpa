@@ -49,9 +49,22 @@ FactoryBot.define do
     photo {fixture_file_upload(Rails.root.join('spec', 'images', 'city.jpeg'), 'image/jpeg') }
   end
 
+  factory(:comment) do
+    body("Test Comment")
+    user_id(1)
+    tour_id(1)
+  end
+
+  factory(:comment2, class:Comment) do
+    body("Test Comment 2")
+    user_id(2)
+    tour_id(1)
+  end
+
   factory(:account) do
     user_id 1
   end
+
   factory(:account2, class: Account) do
     user_id 2
   end
