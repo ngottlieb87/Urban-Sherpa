@@ -18,7 +18,7 @@ class ApplicationController < ActionController::Base
       flash[:alert]="Please Sign In"
       redirect_to tours_path
     else
-    @comment = Comment.find(params[:tour_id])
+    @comment = Comment.find(params[:id])
     current_user.id === @comment.user_id || is_admin?
     end
   end
@@ -39,10 +39,9 @@ class ApplicationController < ActionController::Base
   end
 
   def authorize_comment_edit
-    @tour = Tour.find(params[:id])
     if !user_comment
       flash[:alert]= "Not your comment to edit/delete"
-      redirect_to "/tours/#{@tour.id}"
+      redirect_to tours_path
     end
   end
 
