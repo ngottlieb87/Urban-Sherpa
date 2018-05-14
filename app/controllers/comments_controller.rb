@@ -40,7 +40,7 @@ before_action :authorize_comment_edit, only: [ :edit, :update, :destroy]
     @tour = Tour.find(params[:id])
     @comment = @tour.comments.find(params[:tour_id])
     @comment.destroy
-    flash[:notice] = "Comment Deleted!"
+    flash[:notice] = "Comment Removed"
     redirect_to "/tours/#{@tour.id}"
   end
 

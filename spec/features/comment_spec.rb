@@ -60,4 +60,20 @@ describe "user comment spec" do
     click_button "Leave Comment"
     expect(page).to have_content "New Comment"
   end
+
+  it "lets user delete comment", js: true do
+    visit 'tours#index'
+    click_on 'Sign In'
+    user = FactoryBot.create(:user)
+    FactoryBot.create(:tour)
+    FactoryBot.create(:comment)
+    fill_in 'email', :with => user.email
+    fill_in 'password', :with => user.password
+    click_button "Sign in"
+    visit "tours/#{Tour.first.id}"
+    accept_confirm do
+      click_on "Delete Comment"
+    end
+    expect(page).to have_content "Comment Removed"
+  end
 end
