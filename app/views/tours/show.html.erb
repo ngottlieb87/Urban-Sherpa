@@ -48,8 +48,8 @@
         <% @tour.comments.each do |comment| %>
         <%= comment.body %>
         <% if current_user && current_user.id === comment.user_id || is_admin? %>
-        <p><%= link_to "Edit", edit_tour_comment_path(comment) %> |
-        <%= link_to "Delete", tour_comment_path(comment),
+        <p><%= link_to "Edit Comment", edit_tour_comment_path(comment) %> |
+        <%= link_to "Delete Comment", tour_comment_path(comment),
         :data=>{:confirm => "Delete Comment?", :method => "delete"}%>
         </p>
         <% end %>
