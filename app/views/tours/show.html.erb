@@ -20,10 +20,11 @@
         Location: <%= @tour.location %>
         <br>
         Time: <%=@tour.time.strftime("%I:%M%P")%>
+        <%= render "layouts/errors", :object => @tour_order %>
         <%= form_for @tour_order do |f| %>
           <br>
           <%= f.label "Number in Party?(Max 5)"%>
-          <%= f.number_field :quantity, in: 1..5, class:"form-control" %>
+          <%= f.select :quantity,([["1",1],["2",2],["3",3],["4",4],["5",5]]), class:"form-control" %>
           <%= f.hidden_field :tour_id, value: @tour.id %>
           <br>
           <%= f.submit "Add to Your Itinerary", class: "btn btn-dark form-control" %>

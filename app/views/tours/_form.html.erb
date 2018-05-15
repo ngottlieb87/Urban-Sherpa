@@ -12,7 +12,7 @@
   <%= f.time_select :time, min: Time.now, ampm: true, default: Time.now, class: "form-control"%>
   <br>
   <%= f.label "What Would You like for Compensation?" %>
-  <%= f.number_field :price, min: 1,  class:"form-control"%>
+  <%= f.number_field :price, min: 1, value:0.00,  class:"form-control"%>
   <br>
   <%= f.file_field :photo, class: "form-control" %>
   <br>

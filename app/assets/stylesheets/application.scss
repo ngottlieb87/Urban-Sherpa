@@ -77,7 +77,7 @@ p{
 }
 
 .comment{
-  margin-top: 25px;
+  margin-top: 65px;
   padding: 20px;
   border-radius: 10px;
 }
@@ -121,9 +121,11 @@ p{
 }
 
 .alert_notice{
-  max-width: 33%;
-  margin-top: 50px;
-  margin-left: 500px;
+  max-width: 50%;
+  margin-top: 60px;
+  position:fixed;
+  z-index:7;
+  list-style:none;;
 }
 
 #notice{
@@ -146,10 +148,10 @@ color: red;
   z-index:8;
 }
 #map{
-  margin-top: 40px;
+  margin-top: 80px;
 }
 .tour_details{
-  margin-top: 40px;
+  margin-top: 80px;
   margin-bottom: 20px;
 }
 #dropmenu_items {
@@ -162,7 +164,7 @@ color: red;
 
 #tour_filter{
   float: right;
-  margin-top:13px;
+  margin-top: 60px !important;
 }
 
 .cart_display{
