@@ -53,8 +53,13 @@ class ApplicationController < ActionController::Base
   end
 
   def guide_edit
-    @tour = Tour.find(params[:id])
-    current_user.id === @tour.user_id || is_admin?
+    if !current_user
+      flash[:alert] = "Please Sign In/Create Account"
+      redirect_to tours_path
+    else
+      @tour = Tour.find(params[:id])
+      current_user.id === @tour.user_id || is_admin?
+    end
   end
 
   def authorize_guide_edit
