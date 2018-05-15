@@ -13,15 +13,22 @@
         :data=>{:confirm => "Are You Sure?", :method => "delete"}%></p>
   </div>
 </div>
-
+<br>
 <div class="card">
   <div class="card-body profile">
-    <% if is_guide?%>
+    <% if is_guide? %>
       <% if current_user.tours.any? %>
-        You have 1
+        <h2>Tours You're Hosting:</h2>
+        <% current_user.tours.each do |tour| %>
+        <li><strong>Tour: <%= tour.title %></strong></li>
+        <li>Location: <%= tour.location %></li>
+        <li>Price: <%= number_to_currency tour.price %>
+        <li>Time/Date: <%= tour.time.strftime("%I:%M%P")%> / <%= tour.date %><li>
+        <% end %>
       <% end %>
+      <hr>
     <% end %>
-    <h2>Your Tours</h2>
+    <h2>Tours Your Attending</h2>
     <% if current_user.account.orders.any? %>
       <% current_user.account.orders.each do |order|  %>
         <% if order.status === "paid" %>
@@ -36,7 +43,7 @@
           <% end %>
         <% end %>
       <% else %>
-      <p> No Tours On Account </p>
+      <p>No Tours On Account</p>
     <% end %>
   </div>
 </div>
