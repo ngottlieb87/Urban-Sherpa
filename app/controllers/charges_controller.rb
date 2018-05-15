@@ -1,4 +1,5 @@
 class ChargesController < ApplicationController
+  before_action :authorize
   def new
     @amount = current_user.account.orders.last.total_price
     @tour_orders = current_order.tour_orders
@@ -6,7 +7,7 @@ class ChargesController < ApplicationController
 
   def create
     # Amount in cents
-    @amount = current_user.account.orders.first.total_price
+    @amount = current_user.account.orders.last.total_price
     customer = Stripe::Customer.create(
       :email => params[:stripeEmail],
       :source  => params[:stripeToken]

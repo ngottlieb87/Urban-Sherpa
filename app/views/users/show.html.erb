@@ -4,7 +4,7 @@
     <p>Email: <%= @user.email %></p>
     <p>Username: <%= @user.user_name %></p>
     <p>Account Type:
-      <% if @user.guide === true %>
+      <% if is_guide? %>
         Guide
         <% else %>
         Explorer</p>
@@ -16,14 +16,21 @@
 
 <div class="card">
   <div class="card-body profile">
+    <% if is_guide?%>
+      <% if current_user.tours.any? %>
+        You have 1
+      <% end %>
+    <% end %>
     <h2>Your Tours</h2>
     <% if current_user.account.orders.any? %>
       <% current_user.account.orders.each do |order|  %>
         <% if order.status === "paid" %>
           <% order.tour_orders.each do |tour_info| %>
-            <%= tour_info.tour.title %>
-          <!-- add more info for past tours-->
-            <%end %>
+            <li>Tour Name: <%= tour_info.tour.title %></li>
+            <li>Guide: <%= tour_info.tour.user.user_name %></li>
+          <%end %>
+          <strong>Payment: <%= number_to_currency order.total_price %></strong>
+          <hr>
           <% elsif order.status === "In Progress" %>
             <p>Tour Pending...</p>
           <% end %>

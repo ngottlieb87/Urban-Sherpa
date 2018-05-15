@@ -34,6 +34,7 @@ class UsersController < ApplicationController
     @comments = @user.comments.all
     @account = Account.find(current_user.id)
     @tours = @user.tours.all
+    @orders= @user.account.orders.all
     @comments.destroy_all
     @tours.destroy_all
     @account.destroy
