@@ -19,8 +19,8 @@ class ApplicationController < ActionController::Base
       flash[:alert]="Please Sign In"
       redirect_to tours_path
     else
-      @tour = Tour.find(params[:id])
-      @comment = @tour.comments.find(params[:tour_id])
+      @tour = Tour.find(params[:tour_id])
+      @comment = @tour.comments.find(params[:id])
       current_user.id === @comment.user_id || is_admin?
     end
   end
