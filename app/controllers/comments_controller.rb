@@ -1,6 +1,6 @@
 class CommentsController < ApplicationController
 before_action :authorize, only: [:new, :create, :show]
-before_action :authorize_comment_edit, only: [ :edit, :update, :destroy]
+before_action :authorize_comment_edit, only: [ :edit, :update]
 
   def new
     @tour = Tour.find(params[:tour_id])
@@ -20,13 +20,13 @@ before_action :authorize_comment_edit, only: [ :edit, :update, :destroy]
   end
 
   def edit
-    @tour = Tour.find(params[:tour_id])
-    @comment = @tour.comments.find(params[:id])
+    @tour = Tour.find(params[:id])
+    @comment = @tour.comments.find(params[:tour_id])
   end
 
   def update
-    @tour = Tour.find(params[:tour_id])
-    @comment = @tour.comments.find(params[:id])
+    @tour = Tour.find(params[:id])
+    @comment = @tour.comments.find(params[:tour_id])
     if @comment.update(comment_params)
       flash[:notice] = "Comment Updated"
       redirect_to "/tours/#{@tour.id}"
@@ -47,6 +47,6 @@ before_action :authorize_comment_edit, only: [ :edit, :update, :destroy]
   private
 
   def comment_params
-    params.require(:comment).permit(:body,:user_id,:tour_id,:id)
+    params.require(:comment).permit(:body,:user_id,:tour_id)
   end
 end

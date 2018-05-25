@@ -6,6 +6,7 @@ class ApplicationController < ActionController::Base
   helper_method :current_order
   helper_method :authorize_guide
   helper_method :authorize_guide_edit
+  helper_method :guests
 
   def current_user
     if session[:user_id]
@@ -18,8 +19,9 @@ class ApplicationController < ActionController::Base
       flash[:alert]="Please Sign In"
       redirect_to tours_path
     else
-    @comment = Comment.find(params[:id])
-    current_user.id === @comment.user_id || is_admin?
+      @tour = Tour.find(params[:tour_id])
+      @comment = @tour.comments.find(params[:id])
+      current_user.id === @comment.user_id || is_admin?
     end
   end
 

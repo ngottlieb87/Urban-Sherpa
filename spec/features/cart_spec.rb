@@ -11,11 +11,11 @@ describe 'add tour to cart' do
     fill_in 'password', :with => user.password
     click_button "Sign in"
     visit "tours/#{Tour.first.id}"
-    fill_in "tour_order_quantity", :with => 1
+    find("#tour_order_quantity").find(:option, "1").select_option
     click_on "Add to Your Itinerary"
     visit cart_path
     click_on "Checkout"
-    expect(page).to have_content "Your Total:"
+    expect(page).to have_content "Your Total:#{tour.price}"
   end
 
   it "fails cart without signin" do

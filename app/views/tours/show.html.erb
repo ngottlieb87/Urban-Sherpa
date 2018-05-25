@@ -45,7 +45,7 @@
           <% if current_user %>
             <%=link_to "Leave a comment", new_tour_comment_path(@tour), remote: true%>
           <% end %>
-        <div class= "card-body">
+        <div class= "card-body comment_display">
         <% @tour.comments.each do |comment| %>
         <%= comment.body %>
         <% if current_user && current_user.id === comment.user_id || is_admin? %>
@@ -61,7 +61,7 @@
         <span class= "displayComment commentEdit"></span>
 
       <% else %>
-      <div class = "card">
+      <div class = "card comment_display">
         <p class= "addComment">There are currently no comments for this tour.</p>
            <% if current_user %>
            <p>Been on this tour? <%= link_to "Let others know what you think about it!", new_tour_comment_path(@tour), remote: true%></p>

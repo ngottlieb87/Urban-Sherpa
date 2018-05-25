@@ -31,7 +31,7 @@ gem 'rails_admin'
 gem 'socialization'
 gem 'will_paginate', '~> 3.1.0'
 gem 'bcrypt', '~> 3.1.7'
-gem 'paperclip', '~> 6.0'
+gem "paperclip", "~> 6.0.0"
 gem 'stripe'
 gem 'rails-html-sanitizer', '~> 1.0', '>= 1.0.4'
 gem 'geocoder', '~> 1.4', '>= 1.4.7'
