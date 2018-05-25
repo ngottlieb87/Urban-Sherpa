@@ -84,6 +84,10 @@ p{
   border-radius: 10px;
 }
 
+.comment-display p{
+  padding: 40px;
+}
+
 .back{
   text-align: center;
 }
@@ -171,4 +175,14 @@ p{
   width: 600px;
   margin-top: 40px;
   margin: 80px auto;
+}
+
+.edit_comment{
+  width: 600px;
+  margin-top: 40px;
+  margin: 80px auto;
+}
+
+.edit_comment .form-control{
+  width: 92%;
 }
