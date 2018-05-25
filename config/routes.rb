@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   get '/signin' => 'sessions#new'
   post '/signin' => 'sessions#create'
   get '/signout' => 'sessions#destroy'
+  get'/about'=> 'about#index'
 
   resource :cart, only: [:show, :destroy]
   resources :charges
