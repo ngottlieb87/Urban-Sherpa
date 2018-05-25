@@ -34,8 +34,12 @@
   </div>
   <div class="col-md-4" id="map">
     <div class="card">
-      <%= image_tag "http://maps.googleapis.com/maps/api/staticmap?center=#{@tour.latitude},#{@tour.longitude}&markers=#{@tour.latitude},#{@tour.longitude}&zoom=20&size=720x480&key="+ ENV['MAP_KEY'],
-                class: 'img-fluid img-rounded', alt: "#{@tour.title} on the map"%>
+
+        <%= link_to "http://maps.google.com/maps?q=#{@tour.latitude},#{@tour.longitude}", target: :_blank do %>
+        <%=image_tag  "http://maps.googleapis.com/maps/api/staticmap?center=#{@tour.latitude},#{@tour.longitude}&markers=#{@tour.latitude},#{@tour.longitude}&zoom=20&size=720x480&key="+ ENV['MAP_KEY'],
+                  class: 'img-fluid img-rounded', alt: "#{@tour.title} on the map"%>
+       <% end %>
+       <p>Click Map For More Details (Opens a New Window)</p>
     </div>
   </div>
   <div class= "col-md-4 comment">
@@ -49,10 +53,9 @@
         <% @tour.comments.each do |comment| %>
         <%= comment.body %>
         <% if current_user && current_user.id === comment.user_id || is_admin? %>
-        <p><%= link_to "Edit Comment", edit_tour_comment_path(comment) %> |
-        <%= link_to "Delete Comment", tour_comment_path(comment),
-        :data=>{:confirm => "Delete Comment?", :method => "delete"}%>
-        </p>
+        <p class="comment_tag"><%= link_to "Edit", edit_tour_comment_path(comment) %> |
+        <%= link_to "Delete ", tour_comment_path(comment),
+        :data=>{:confirm => "Delete Comment?", :method => "delete"}%></p>
         <% end %>
         <br>
         Comment By: <em><%= comment.user.user_name %></em> <%=image_tag comment.user.avatar.url(:small),class:"avatar"%>

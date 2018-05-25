@@ -151,18 +151,6 @@ p{
 .tour_img{
   border-radius: 40px;
 }
-.tour_img:hover{
-  -webkit-transform: scale(1.1);
-  -moz-transform: scale(1.1);
-  -o-transform: scale(1.1);
-  -ms-transform: scale(1.1);
-  transform: scale(1.1);
-  cursor: pointer;
-
-  -webkit-box-shadow: 0px 3px 5px rgba(0,0,0,0.2);
-  -moz-box-shadow: 0px 3px 5px rgba(0,0,0,0.2);
-  box-shadow: 0px 3px 5px rgba(0,0,0,0.2);
-}
 
 .avatar{
   border-radius: 40px;
@@ -254,7 +242,25 @@ p{
 }
 #map{
   margin-top: 80px;
+  max-height:100px;
 }
+#map p{
+  font-size: 12px;
+}
+
+#map:hover{
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -o-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+  cursor: pointer;
+
+  -webkit-box-shadow: 0px 3px 5px rgba(0,0,0,0.2);
+  -moz-box-shadow: 0px 3px 5px rgba(0,0,0,0.2);
+  box-shadow: 0px 3px 5px rgba(0,0,0,0.2);
+}
+
 .tour_details{
   margin-top: 80px;
   margin-bottom: 20px;
@@ -294,4 +300,8 @@ p{
 
 .edit_comment .form-control{
   width: 92%;
+}
+
+.comment_tag{
+  font-size: 12px;
 }
