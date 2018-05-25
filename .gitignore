@@ -16,4 +16,5 @@
 /node_modules
 /yarn-error.log
 .byebug_history
-/public/system/users/avatars
+./spec/images/
+./public/system/

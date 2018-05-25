@@ -16,7 +16,9 @@
  */
 
  @import "bootstrap";
-
+.pay_rec{
+  margin-top: 70px;
+}
  a:link {
    color: #263238;
  }
@@ -114,10 +116,8 @@ p{
 
 .profile{
   list-style:none;
-}
-
-.profile > li{
-  margin-left: 10px;
+  margin-top: 75px;
+  margin-bottom: 30px;
 }
 
 .alert_notice{
@@ -126,14 +126,6 @@ p{
   position:fixed;
   z-index:7;
   list-style:none;;
-}
-
-#notice{
-  color: green;
-}
-
-#alert{
-color: red;
 }
 
 .displayComment{

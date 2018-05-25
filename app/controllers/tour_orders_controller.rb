@@ -17,8 +17,11 @@ class TourOrdersController < ApplicationController
     @open_orders = @account.orders
     @order = current_order
     @tour = @order.tour_orders.find(params[:id])
+    @order.status = nil
     @tour.destroy
+    binding.pry
     @order.save
+      binding.pry
     flash[:notice] = "Tour Removed"
     redirect_to cart_path
   end

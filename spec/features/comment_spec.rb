@@ -56,7 +56,6 @@ describe "user comment spec" do
     click_button "Sign in"
     visit "tours/#{Tour.first.id}"
     click_on "Edit Comment"
-    binding.pry
     fill_in 'comment_body', with: "New Comment"
     click_button "Leave Comment"
     expect(page).to have_content "New Comment"
@@ -89,7 +88,7 @@ describe "user comment spec" do
     fill_in 'email', :with => user.email
     fill_in 'password', :with => user.password
     click_button "Sign in"
-    visit "tours/#{tour.id}/comments/#{comment2.id}/edit"
+    visit "tours/#{comment2.id}/comments/#{tour.id}/edit"
     expect(page).to have_content "Not your comment to edit/delete"
   end
 end

@@ -11,7 +11,7 @@ describe 'add tour to cart' do
     click_button "Sign in"
     FactoryBot.create(:tour)
     visit "tours/#{Tour.first.id}"
-    fill_in "tour_order_quantity", :with => 1
+    find("#tour_order_quantity").find(:option, "1").select_option
     click_on "Add to Your Itinerary"
     visit cart_path
     accept_confirm do

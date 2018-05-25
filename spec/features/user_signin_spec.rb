@@ -8,7 +8,7 @@ describe 'user sign in' do
     fill_in 'email', :with => user.email
     fill_in 'password', :with => user.password
     click_button "Sign in"
-    expect(page).to have_content "You've signed in."
+    expect(page).to have_content "Welcome back #{user.user_name}"
   end
 
   it 'fail user sign in', js:true do
