@@ -17,12 +17,12 @@
 
  @import "bootstrap";
 //about page banner
- .first_image {
- -webkit-animation: bannermove 30s linear infinite;
-    -moz-animation: bannermove 30s linear infinite;
-     -ms-animation: bannermove 30s linear infinite;
-      -o-animation: bannermove 30s linear infinite;
-         animation: bannermove 30s linear infinite;
+ .first_image{
+ -webkit-animation: bannermove 50s linear infinite;
+    -moz-animation: bannermove 50s linear infinite;
+     -ms-animation: bannermove 50s linear infinite;
+      -o-animation: bannermove 50s linear infinite;
+         animation: bannermove 50s linear infinite;
 }
 
 @keyframes "bannermove" {
