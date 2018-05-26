@@ -22,7 +22,7 @@
           <a class="nav-link"> <%= link_to "About", "/about" %></a>
         </li>
         <li class="nav-item active">
-          <a class="nav-link"><%= link_to "Cart: #{tour_cart}", cart_path%></a>
+          <a class="nav-link"><%= link_to "<i class='fa fa-shopping-cart' aria-hidden='true'></i> Cart: #{tour_cart}".html_safe, cart_path%></a>
         </li>
         <li class="nav-item dropdown" id="user_nav_drop">
           <a class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="navbarDropdown"><%= current_user.user_name%></a>
@@ -31,15 +31,24 @@
               <div class="dropdown-item"><i class="fa fa-user-circle-o" aria-hidden="true"></i> Profile</div>
               <% end %>
               <div class="dropdown-item">
-              <%= link_to cart_path do%>
-              <i class="fa fa-sticky-note-o" aria-hidden="true"></i><%= "Itinerary | #{tour_cart}"%>
+                <%= link_to cart_path do%>
+                <i class="fa fa-sticky-note-o" aria-hidden="true"></i><%= " Itinerary | #{tour_cart}"%>
+                <% end %>
               </div>
-              <% end %>
               <% if is_guide? %>
-              <%= link_to "Create A Tour", new_tour_path, class: "dropdown-item"%>
+                <div class="dropdown-item">
+                <%= link_to new_tour_path do%>
+                <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                Create Tour
+                <% end %>
               <% end %>
-              <div class="dropdown-divider"></div>
-                <%= link_to "Sign Out", "/signout", class:"dropdown-item"%>
+                <div class="dropdown-divider"></div>
+                <div class="dropdown-item">
+                  <%= link_to "/signout" do%>
+                    <i class="fa fa-sign-out fa-lg" aria-hidden="true"></i>Sign Out
+                  <% end %>
+                </div>
+              </div>
             </div>
           </li>
         </ul>

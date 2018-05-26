@@ -14,7 +14,8 @@
       <% end %>
       <h4> Cart Total: <%= number_to_currency current_order.total_price %></h4>
       <br>
-    <%= link_to "Checkout", new_charge_path, class: "btn btn-primary" %>
+    <%= link_to "Checkout", new_charge_path, class: "btn btn-primary" %>      <i class="fa fa-cc-stripe fa-lg" aria-hidden="true"></i>
+
     <% else %>
       <p><%= "You havent signed up for any tours yet."%> <%= link_to "Go and check'em out!", tours_path %></p>
     <% end %>
