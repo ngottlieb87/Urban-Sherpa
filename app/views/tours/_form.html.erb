@@ -12,9 +12,22 @@
   <%= f.time_select :time, min: Time.now, ampm: true, default: Time.now, class: "form-control"%>
   <br>
   <%= f.label "What Would You like for Compensation?" %>
-  <%= f.number_field :price, min: 1,  class:"form-control"%>
+  <div class = "input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text">$</span>
+    </div>
+    <%= f.text_field :price, min: 1,  class:"form-control", label: "Amount (to the nearest dollar)"%>
+    <div class="input-group-append">
+      <span class="input-group-text">.00</span>
+    </div>
+  </div>
   <br>
-  <%= f.file_field :photo, class: "form-control" %>
+  <div class="input-group mb-3">
+    <div class="custom-file">
+      <label class="custom-file-label">Choose Image</label>
+      <input><%= f.file_field :photo, class: "form-control custom-file-input" %></input>
+    </div>
+  </div>
   <br>
   <%= f.hidden_field(:user_id, value: current_user.id)%>
   <%= f.submit "Create Tour", class: " btn btn-success form-control"%>
