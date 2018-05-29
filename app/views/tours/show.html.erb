@@ -49,18 +49,19 @@
           <% end %>
         <div class= "card-body comment_display">
         <% @tour.comments.each do |comment| %>
-        <%= comment.body %>
+        <div class="comment_each">
+        <%=image_tag comment.user.avatar.url(:small), class:"avatar"%> <em><%= comment.user.user_name %></em>
+        -  "<%= comment.body %>"
         <% if current_user && current_user.id === comment.user_id || is_admin? %>
         <p class="comment_tag"><%= link_to "Edit", edit_tour_comment_path(comment) %> |
         <%= link_to "Delete ", tour_comment_path(comment),
         :data=>{:confirm => "Delete Comment?", :method => "delete"}%></p>
         <% end %>
+        </div>
         <br>
-        Comment By: <em><%= comment.user.user_name %></em> <%=image_tag comment.user.avatar.url(:small),class:"avatar"%>
         <hr>
         <% end %>
         <span class= "displayComment commentEdit"></span>
-
       <% else %>
       <div class = "card comment_display">
         <p class= "addComment">There are currently no comments for this tour.</p>
