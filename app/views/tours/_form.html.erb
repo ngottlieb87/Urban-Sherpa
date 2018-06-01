@@ -22,12 +22,13 @@
     </div>
   </div>
   <br>
-  <div class="input-group mb-3">
+  <!-- <div class="input-group mb-3">
     <div class="custom-file">
-      <label class="custom-file-label">Choose Image</label>
-      <input><%= f.file_field :photo, class: "form-control custom-file-input" %></input>
-    </div>
-  </div>
+      <label class="custom-file-label">Upload Tour Img</label> -->
+    <%= f.label "Upload Tour Image"%>
+    <%= f.file_field :photo, class: "form-control" %>
+    <!--  custom-file-input ^</div>
+  </div> -->
   <br>
   <%= f.hidden_field(:user_id, value: current_user.id)%>
   <%= f.submit "Create Tour", class: " btn btn-success form-control"%>
