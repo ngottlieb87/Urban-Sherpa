@@ -3,7 +3,7 @@ require 'rails_helper'
 describe 'guide creates tour', js:true do
   it 'creates new tour' do
     visit 'tours#index'
-    click_on 'Sign In'
+    click_link 'Sign In'
     user = FactoryBot.create(:user)
     fill_in 'email', :with => user.email
     fill_in 'password', :with => user.password
@@ -22,7 +22,7 @@ describe 'guide creates tour', js:true do
   end
   it 'fails tour creation', js:true do
     visit 'tours#index'
-    click_on 'Sign In'
+    click_link 'Sign In'
     user = FactoryBot.create(:user)
     fill_in 'email', :with => user.email
     fill_in 'password', :with => user.password

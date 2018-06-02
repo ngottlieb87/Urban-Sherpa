@@ -62,10 +62,10 @@ FactoryBot.define do
   end
 
   factory(:account) do
-    user_id 1
+    user_id(1)
   end
 
   factory(:account2, class: Account) do
-    user_id 2
+    user_id(2)
   end
 end

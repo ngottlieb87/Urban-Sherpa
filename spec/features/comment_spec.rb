@@ -55,7 +55,7 @@ describe "user comment spec" do
     fill_in 'password', :with => user.password
     click_button "Sign in"
     visit "tours/#{Tour.first.id}"
-    click_on "Edit Comment"
+    find(".comment_tag").click_on "Edit"
     fill_in 'comment_body', with: "New Comment"
     click_button "Leave Comment"
     expect(page).to have_content "New Comment"
@@ -72,7 +72,7 @@ describe "user comment spec" do
     click_button "Sign in"
     visit "tours/#{Tour.first.id}"
     accept_confirm do
-      click_on "Delete Comment"
+      find(".comment_tag").click_on "Delete"
     end
     expect(page).to have_content "Comment Removed"
   end
