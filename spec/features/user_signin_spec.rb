@@ -3,7 +3,7 @@ require 'rails_helper'
 describe 'user sign in' do
   it 'create a new user', js:true do
     visit 'tours#index'
-    click_on 'Sign In'
+    click_link 'Sign In'
     user = FactoryBot.create(:user)
     fill_in 'email', :with => user.email
     fill_in 'password', :with => user.password
@@ -13,7 +13,7 @@ describe 'user sign in' do
 
   it 'fail user sign in', js:true do
     visit 'tours#index'
-    click_on 'Sign In'
+    click_link 'Sign In'
     fill_in 'email', :with => "test@test.com"
     fill_in 'password', :with => "password"
     click_button "Sign in"
@@ -27,7 +27,7 @@ describe 'user sign in' do
 
   it 'fail signed in user from accessing others account', js:true do
     visit 'tours#index'
-    click_on 'Sign In'
+    click_link 'Sign In'
     FactoryBot.create(:user)
     user=FactoryBot.create(:attendee)
     fill_in 'email', :with => user.email

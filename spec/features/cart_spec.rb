@@ -15,7 +15,7 @@ describe 'add tour to cart' do
     click_on "Add to Your Itinerary"
     visit cart_path
     click_on "Checkout"
-    expect(page).to have_content "Your Total:#{tour.price}"
+    expect("#{user.account.orders.last.total_price}").to eq("40.0")
   end
 
   it "fails cart without signin" do

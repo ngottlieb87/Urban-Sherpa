@@ -137,10 +137,6 @@ width: 1000px;
    text-align: center;
  }
 
- .signIn{
-   margin-top:50px;
- }
-
 h1{
   font-family: 'Open Sans', sans-serif;
   text-shadow: 20%;
@@ -172,7 +168,7 @@ p{
 
 .signUpCard{
   width: 600px;
-  margin-top: 40px;
+  margin-top: 50px;
   margin: 80px auto;
 }
 
@@ -213,6 +209,10 @@ p{
   margin-right:20px;
   margin-top:-20px;
 }
+.signInCard{
+  margin-top:60px;
+
+}
 .signIn_button{
   position: relative;
   margin-left: 745px;
@@ -246,7 +246,6 @@ p{
 #dropdown_login{
   display:none;
   margin-left:1000px;
-  margin-top: 0px;
   position:fixed;
   z-index:5;
 }

@@ -3,7 +3,7 @@ require 'rails_helper'
 describe 'fail authorizations for tour' do
   it 'fail auth routing for tour creation', js: true do
     visit 'tours#index'
-    click_on 'Sign In'
+    click_link 'Sign In'
     user = FactoryBot.create(:attendee)
     fill_in 'email', :with => user.email
     fill_in 'password', :with => user.password
@@ -14,7 +14,7 @@ describe 'fail authorizations for tour' do
 
   it 'fail tour authorization edit',js:true do
     visit 'tours#index'
-    click_on 'Sign In'
+    click_link 'Sign In'
     user = FactoryBot.create(:user)
     FactoryBot.create(:tour)
     fill_in 'email', :with => user.email
@@ -22,7 +22,7 @@ describe 'fail authorizations for tour' do
     click_button "Sign in"
     visit '/signout'
     visit 'tours#index'
-    click_on 'Sign In'
+    click_link 'Sign In'
     user = FactoryBot.create(:attendee)
     fill_in 'email', :with => user.email
     fill_in 'password', :with => user.password
