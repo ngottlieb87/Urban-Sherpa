@@ -178,6 +178,13 @@ p{
   background-attachment: fixed;
 }
 
+.addComment{
+  text-align: justify;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+}
+
 .comment{
   margin-top: 65px;
   padding: 20px;
@@ -187,6 +194,8 @@ p{
 .comment-display p{
   padding: 40px;
 }
+
+
 
 .back{
   text-align: center;
@@ -241,6 +250,7 @@ p{
 
 .displayComment{
   display:none;
+  padding: 5px 10px 10px 10px;
 }
 
 #dropdown_login{

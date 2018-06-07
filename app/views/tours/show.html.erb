@@ -43,9 +43,9 @@
   <div class= "col-md-4 comment">
     <% if @tour.comments.any? %>
       <div class= "card">
-          <h3>Comments for <%= @tour.title %></h3>
+          <h3 class="addComment">Comments for <%= @tour.title %></h3>
           <% if current_user %>
-            <%=link_to "Leave a comment", new_tour_comment_path(@tour), remote: true%>
+            <%=link_to "Leave a comment", new_tour_comment_path(@tour), class:"addComment", remote: true%>
           <% end %>
         <div class= "card-body comment_display">
         <% @tour.comments.each do |comment| %>
@@ -66,7 +66,7 @@
       <div class = "card comment_display">
         <p class= "addComment">There are currently no comments for this tour.</p>
            <% if current_user %>
-           <p>Been on this tour? <%= link_to "Let others know what you think about it!", new_tour_comment_path(@tour), remote: true%></p>
+           <p class="addComment">Been on this tour? <%= link_to "Let others know what you think about it!", new_tour_comment_path(@tour), remote: true%></p>
            <% end %>
            <span class= "displayComment"></span>
         </div>
