@@ -4,7 +4,7 @@
   <h1>Sign in</h1>
   <%= form_tag signin_path do %>
     <p><span class="sign_in_title">Email</span></p>
-    <span class="sign_in"><%= text_field_tag :email %></span>
+    <span class="sign_in"><%= text_field_tag :email || :user_name %></span>
     <br>
     <p><span class="sign_in_title">Password</span></p>
     <span class="sign_in"><%= password_field_tag :password%></span>

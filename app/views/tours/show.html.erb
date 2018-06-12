@@ -25,6 +25,7 @@
           <br>
           <%= f.label "Number in Party?(Max 5)"%>
           <%= f.select :quantity,([["1",1],["2",2],["3",3],["4",4],["5",5]]), class:"form-control" %>
+          <br>
           <%= f.hidden_field :tour_id, value: @tour.id %>
           <br>
           <%= f.submit "Add to Your Itinerary", class: "btn btn-dark form-control" %>
@@ -49,15 +50,15 @@
           <% end %>
         <div class= "card-body comment_display">
         <% @tour.comments.each do |comment| %>
-        <div class="comment_each">
-        <%=image_tag comment.user.avatar.url(:small), class:"avatar"%> <em><%= comment.user.user_name %></em>
-        -  "<%= comment.body %>"
-        <% if current_user && current_user.id === comment.user_id || is_admin? %>
-        <p class="comment_tag"><%= link_to "Edit", edit_tour_comment_path(comment) %> |
-        <%= link_to "Delete", tour_comment_path(comment),
-        :data=>{:confirm => "Delete Comment?", :method => "delete"}%></p>
-        <% end %>
-        </div>
+          <div class="comment_each">
+            <%=image_tag comment.user.avatar.url(:small), class:"avatar"%> <em><%= comment.user.user_name %></em>
+            -  "<%= comment.body %>"
+            <% if current_user && current_user.id === comment.user_id || is_admin? %>
+            <p class="comment_tag"><%= link_to "Edit", edit_tour_comment_path(comment) %> |
+            <%= link_to "Delete", tour_comment_path(comment),
+            :data=>{:confirm => "Delete Comment?", :method => "delete"}%></p>
+            <% end %>
+          </div>
         <br>
         <hr>
         <% end %>
