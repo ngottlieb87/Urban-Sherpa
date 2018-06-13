@@ -10,11 +10,11 @@ class UsersController < ApplicationController
     account = Account.new
 
     if @user.save
-      ApplicationMailer.sample_email(@user).deliver
       flash[:notice] = "Thanks for signing up!"
       session[:user_id] = @user.id
       account.user_id = @user.id
       account.save
+      ApplicationMailer.sign_up_email(@user).deliver_now
       redirect_to '/'
     else
       flash[:notice] = "There was a problem signing up."
