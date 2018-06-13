@@ -25,7 +25,7 @@
           <li>Location: <%= tour.location %></li>
           <li>Price: <%= number_to_currency tour.price %>
           <li>Time/Date: <%= tour.time.strftime("%I:%M%P")%> / <%= tour.date %><li>
-            <p>Attendee's</p>    
+            <p>Attendee's</p>
           <% end %>
         <% end %>
         <hr>
@@ -43,7 +43,7 @@
               <% if tour_info.tour.present?%>
                 <strong>Payment: <%= number_to_currency order.total_price %></strong>
                 <% else %>
-                <p> Tour Deleted By Guide! </p>
+                <em><p>Tour Deleted By Guide!</p></em>
               <% end %>
               <hr>
             <% end %>

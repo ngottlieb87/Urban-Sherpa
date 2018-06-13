@@ -9,7 +9,7 @@ class User < ApplicationRecord
   validate :password_complexity
   attr_accessor :password
   before_save :encrypt_password
-  
+
   has_attached_file :avatar, styles: { small: "80x90>" }, default_url: "/images/:style/missing.png"
   validates_attachment_content_type :avatar, content_type: /\Aimage\/.*\z/
 
@@ -26,7 +26,7 @@ class User < ApplicationRecord
     self.password_hash = BCrypt::Engine.hash_secret(password,password_salt)
   end
 
-  def self.authenticate(email, password)
+  def self.authenticate(email,password)
    user = User.find_by "email = ?", email
    if user && user.password_hash == BCrypt::Engine.hash_secret(password, user.password_salt)
      user
