@@ -12,7 +12,7 @@
 /tmp/*
 !/log/.keep
 !/tmp/.keep
-.enb
+.env
 /node_modules
 /yarn-error.log
 .byebug_history
