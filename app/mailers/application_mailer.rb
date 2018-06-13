@@ -6,7 +6,7 @@ class ApplicationMailer < ActionMailer::Base
     mail(to: @user.email, subject: 'DO NOT REPLY: Thank for creating an account')
   end
 
-  def reciept_email(email,tour_order,amount)
+  def reciept_email(email,tour_order,amount) 
     @tour_orders=tour_order
     @amount= amount
     mail(to: email, subject: 'Thank You For Your Purchase!')
