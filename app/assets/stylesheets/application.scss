@@ -115,6 +115,7 @@ width: 1000px;
 
 .pay_rec{
   margin-top: 70px;
+  text-align:center;
 }
  a:link {
    color: #263238;
@@ -202,8 +203,11 @@ p{
 }
 
 .jump{
-  width:50%;
   padding: 20px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
 }
 
 .pay{
