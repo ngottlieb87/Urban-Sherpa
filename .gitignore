@@ -12,9 +12,9 @@
 /tmp/*
 !/log/.keep
 !/tmp/.keep
-.env 
 /node_modules
 /yarn-error.log
+.env
 .byebug_history
 ./spec/images/
 ./public/system/

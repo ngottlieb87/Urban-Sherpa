@@ -8,6 +8,7 @@ class ChargesController < ApplicationController
   def create
     # Amount in cents
     @amount = current_user.account.orders.last.total_price
+    @tour_orders = current_order.tour_orders
     customer = Stripe::Customer.create(
       :email => params[:stripeEmail],
       :source  => params[:stripeToken]
@@ -19,6 +20,7 @@ class ChargesController < ApplicationController
       :description => 'Rails Stripe Customer',
       :currency    => 'usd'
     )
+    ApplicationMailer.reciept_email(current_user.email,@tour_orders, @amount).deliver_now
     current_order.update(:status => "paid");
     session[:order_id] = nil
   rescue Stripe::CardError => e
