@@ -26,7 +26,7 @@
           <%= f.label "Number in Party?(Max 5)"%>
           <%= f.select :quantity,([["1",1],["2",2],["3",3],["4",4],["5",5]]), class:"form-control" %>
           <br>
-          <%= f.hidden_field :tour_id, value: @tour.id, user_id: current_user.id %>
+          <%= f.hidden_field :tour_id, value: @tour.id %>
           <br>
           <%= f.submit "Add to Your Itinerary", class: "btn btn-dark form-control" %>
         <% end %>
